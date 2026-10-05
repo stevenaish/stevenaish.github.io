@@ -439,6 +439,31 @@ button:focus-visible,
   .box__title { font-size: 24px; }
 }
 
+/* ---------- About and Connect ---------- */
+.about-hero { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-6); }
+.about-hero .lede { max-width: 62ch; }
+@media (min-width: 900px) {
+  .about-hero { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-8); align-items: center; }
+  .about-hero .hero__portrait { grid-column: 1; grid-row: 1; justify-self: start; max-width: 480px; }
+  .about-hero__text { grid-column: 2; grid-row: 1; }
+}
+
+.about-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-3); padding: var(--space-6) 0; border-top: 1px solid var(--rule); }
+.about-row h2 { margin-bottom: 0; font-size: 30px; }
+.about-row p:last-child { margin-bottom: 0; }
+.link-row { display: flex; flex-wrap: wrap; gap: 0 var(--space-5); }
+.plain-bullets { margin: 0; padding-left: 1.25em; }
+.plain-bullets li { margin-bottom: var(--space-2); }
+.plain-bullets ul { margin-top: var(--space-2); padding-left: 1.25em; }
+@media (min-width: 900px) {
+  .about-row { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-8); padding: var(--space-7) 0; }
+  .about-row h2 { font-size: 36px; }
+}
+
+.contact-stack { display: grid; gap: var(--space-5); }
+.card__title { margin: 0 0 var(--space-2); font-size: 32px; }
+.card--feature .text-secondary { margin-bottom: var(--space-4); }
+
 /* ---------- Technology page ---------- */
 .band--flush-top { padding-top: 0; }
 .card-grid--spaced { margin-top: var(--space-5); }
