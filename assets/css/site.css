@@ -439,6 +439,105 @@ button:focus-visible,
   .box__title { font-size: 24px; }
 }
 
+/* ---------- Career History ---------- */
+.career {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "head" "aside" "main";
+  gap: var(--space-5) 0;
+  padding-bottom: var(--space-8);
+}
+.career__head { grid-area: head; }
+.career__aside { grid-area: aside; }
+.career__main { grid-area: main; }
+.career__head h1 { margin-bottom: var(--space-3); }
+.provenance { margin: 0 0 var(--space-4); font-size: 15px; line-height: 1.5; color: var(--slate); }
+.print-button { gap: var(--space-2); white-space: nowrap; flex-shrink: 0; }
+.print-button[hidden] { display: none; }
+
+.toc__details summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--space-4);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+}
+.toc__details ul { margin: var(--space-3) 0 0; padding: 0; list-style: none; }
+.toc__details li { border-bottom: 1px solid var(--rule); }
+.toc__details li a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 16px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.toc__details li a:hover { color: var(--link-hover); text-decoration: underline; }
+
+.role {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "label" "dates" "name" "title" "body";
+  padding: var(--space-6) 0;
+  border-top: 1px solid var(--rule);
+  scroll-margin-top: var(--space-5);
+}
+.role > .label { grid-area: label; margin-bottom: var(--space-1); }
+.role__dates { grid-area: dates; margin: 0 0 var(--space-1); font-weight: 500; color: var(--slate); }
+.role > h2 { grid-area: name; margin-bottom: var(--space-2); font-size: 30px; }
+.role__title { grid-area: title; margin: 0 0 var(--space-3); font-weight: 500; color: var(--slate); }
+.role__body { grid-area: body; }
+.role__body ul { margin: 0 0 var(--space-4); padding-left: 1.25em; }
+.role__body li { margin-bottom: var(--space-2); }
+.role__lead-in { font-weight: 600; margin-bottom: var(--space-2); }
+.coverage { font-size: 15px; line-height: 1.5; color: var(--slate); }
+.note {
+  padding: var(--space-4) var(--space-5);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--slate);
+  background: var(--mist);
+  border-radius: 4px;
+}
+.page-end { margin: var(--space-6) 0 0; }
+
+@media (min-width: 900px) {
+  .career {
+    grid-template-columns: minmax(0, 1fr) 260px;
+    grid-template-areas: "head aside" "main aside";
+    column-gap: var(--space-8);
+  }
+  .career__head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-5); }
+  .career__aside { position: sticky; top: var(--space-5); align-self: start; padding-top: var(--space-8); }
+  .toc__details summary {
+    min-height: 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--slate);
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    cursor: default;
+    list-style: none;
+  }
+  .toc__details summary::-webkit-details-marker { display: none; }
+  .role {
+    grid-template-columns: 200px minmax(0, 1fr);
+    grid-template-areas: "dates label" "dates name" "dates title" "dates body";
+    column-gap: var(--space-6);
+  }
+  .role > h2 { font-size: 36px; }
+}
+
 /* ---------- Connect band ---------- */
 .connect {
   display: grid;
