@@ -1,0 +1,97 @@
+# Technology page, "All platforms by category" (Build Handoff Part C6).
+# Three kinds of involvement per category: customer (delivery leader), selected
+# (selected, solutioned, integrated or delivered alongside), evaluated.
+# A list left empty is not shown on the page. These describe involvement, not proficiency.
+- name: "Guidewire ecosystem"
+  customer:
+    - "Guidewire InsuranceSuite"
+    - "Guidewire InsuranceNow"
+    - "Guidewire Cloud Platform"
+    - "Guidewire Marketplace"
+  selected:
+    - "Guidewire DataHub and InfoCenter"
+    - "Guidewire Cloud Data Access"
+  evaluated: []
+- name: "Other core suites"
+  customer:
+    - "Insurity ConceptOne"
+  selected:
+    - "BriteCore"
+    - "Duck Creek"
+    - "Majesco"
+  evaluated:
+    - "Socotra"
+    - "Sapiens"
+    - "OneShield"
+    - "eBaoTech"
+    - "Origami Risk"
+    - "Solartis"
+- name: "Assumed and ceded reinsurance"
+  customer:
+    - "SAP FS-RI"
+    - "Guidewire Reinsurance Management"
+    - "StoneRiver reinsurance, now Sapiens"
+  selected: []
+  evaluated: []
+- name: "Rating, pricing, and actuarial"
+  customer: []
+  selected:
+    - "Earnix"
+    - "RMS, now Moody's"
+    - "GGY AXIS, now Moody's"
+    - "WTW Radar"
+    - "Verisk ISO ERC"
+  evaluated:
+    - "Akur8"
+- name: "Underwriting workflow and data"
+  customer: []
+  selected:
+    - "Federato"
+    - "Pega"
+    - "Appian"
+    - "Convr"
+    - "Verisk"
+    - "LexisNexis"
+  evaluated:
+    - "CoreLogic"
+    - "360Value"
+    - "Betterview, now Nearmap"
+    - "Smarty"
+- name: "Documents"
+  customer:
+    - "SmartCOMM"
+    - "Vertafore ImageRight"
+    - "Microsoft SharePoint"
+  selected:
+    - "OpenText Exstream"
+  evaluated:
+    - "Quadient Inspire"
+    - "Messagepoint"
+    - "OpenText Documentum"
+    - "Hyland OnBase"
+    - "IBM FileNet"
+- name: "CRM and agency management"
+  customer:
+    - "Microsoft Dynamics"
+    - "Applied Epic"
+    - "Applied TAM"
+  selected:
+    - "Vertafore AMS"
+    - "Salesforce"
+  evaluated: []
+- name: "Payments"
+  customer: []
+  selected:
+    - "One Inc"
+    - "Paymentus"
+  evaluated:
+    - "InvoiceCloud"
+- name: "Data, cloud, and AI"
+  customer:
+    - "Operational data stores"
+  selected:
+    - "Snowflake"
+    - "AWS"
+    - "Azure"
+    - "Generative and agentic AI"
+  evaluated: []

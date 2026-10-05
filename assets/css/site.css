@@ -439,6 +439,40 @@ button:focus-visible,
   .box__title { font-size: 24px; }
 }
 
+/* ---------- Technology page ---------- */
+.band--flush-top { padding-top: 0; }
+.card-grid--spaced { margin-top: var(--space-5); }
+.box__title--lg { font-size: 26px; }
+
+.swatch {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  margin-right: var(--space-2);
+  vertical-align: -2px;
+  border-radius: 3px;
+}
+.swatch--dark { background: var(--legend-dark); }
+.swatch--medium { background: var(--legend-medium); }
+.swatch--light { background: var(--legend-light); box-shadow: inset 0 0 0 1px var(--legend-light-outline); }
+
+.involvement-lines p { margin-bottom: var(--space-3); font-size: 16px; line-height: 1.5; color: var(--slate); }
+.involvement-tag { display: flex; align-items: center; font-weight: 500; color: var(--slate); }
+
+.legend { display: flex; flex-direction: column; gap: var(--space-3); margin: 0 0 var(--space-4); padding: 0; list-style: none; }
+.legend li { display: flex; align-items: center; font-weight: 500; }
+@media (min-width: 900px) { .legend { flex-direction: row; gap: var(--space-7); } }
+
+.module h3 { margin-bottom: var(--space-3); padding-bottom: var(--space-3); border-bottom: 1px solid var(--rule); font-size: 22px; }
+.involvement-group + .involvement-group { margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--rule); }
+.involvement-label { display: flex; align-items: center; margin: 0 0 var(--space-2); font-size: 14px; font-weight: 600; color: var(--slate); }
+.chips { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
+.chips li { padding: 4px 12px; font-size: 14px; line-height: 1.5; border-radius: 3px; }
+.chips--dark li { color: var(--white); background: var(--legend-dark); }
+.chips--medium li { color: var(--white); background: var(--legend-medium); }
+.chips--light li { color: var(--ink); background: var(--legend-light); }
+
 /* ---------- Accelerators page ---------- */
 .box--cta { align-self: end; }
 .box--cta .text-secondary { margin-bottom: var(--space-4); }
