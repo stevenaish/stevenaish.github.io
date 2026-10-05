@@ -439,6 +439,25 @@ button:focus-visible,
   .box__title { font-size: 24px; }
 }
 
+/* ---------- Accelerators page ---------- */
+.box--cta { align-self: end; }
+.box--cta .text-secondary { margin-bottom: var(--space-4); }
+.group-label {
+  margin: var(--space-6) 0 var(--space-4);
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+.card--listing { display: flex; flex-direction: column; }
+.card--listing .works { margin-bottom: var(--space-4); font-size: 15px; line-height: 1.5; color: var(--slate); }
+.card--listing .link-more { margin-top: auto; }
+.related-title { margin-bottom: var(--space-4); font-size: 26px; }
+.band--mist .pill-row { margin-top: 0; }
+
 /* ---------- Impact ---------- */
 .card h4 { margin: 0 0 var(--space-3); font-family: var(--font-display); font-size: 24px; line-height: 1.25; font-weight: 500; color: var(--navy); }
 @media (min-width: 900px) { .card h4 { font-size: 26px; } }
