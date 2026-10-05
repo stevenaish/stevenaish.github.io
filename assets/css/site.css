@@ -1,25 +1,114 @@
-/* Structural styles for the owned layout skeleton (build list item 4).
-   Fonts, colors, and the full type scale arrive in item 5. */
+/* stevenaish.com design system (Build Handoff Part D)
+   Mobile first: base rules are for the smallest screens; wider layouts are added
+   with min-width media queries (tablet at 768 px, desktop at 900 px). */
 
+/* ---------- Fonts: self-hosted, no requests to Google (D1) ---------- */
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/newsreader-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/newsreader-latin-500-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/ibm-plex-sans-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/ibm-plex-sans-latin-500-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/ibm-plex-sans-latin-600-normal.woff2") format("woff2");
+}
+
+/* ---------- Color and spacing tokens (D2, D3) ---------- */
+:root {
+  --ink: #1B2430;          /* text */
+  --slate: #4A5563;        /* secondary text */
+  --navy: #1F3A5F;         /* brand, primary buttons, bands */
+  --link: #1F4E8C;         /* links */
+  --link-hover: #163A6A;
+  --bronze: #7C5E26;       /* small labels only */
+  --ivory: #FAFAF7;        /* page ground */
+  --white: #FFFFFF;        /* cards and alternating bands */
+  --mist: #EEF1F4;         /* tinted bands */
+  --rule: #D9DDE3;         /* decorative dividers only */
+  --pale: #D6DEE8;         /* secondary text on navy */
+
+  /* Involvement legend (used on the Technology page) */
+  --legend-dark: #1F3A5F;
+  --legend-medium: #3E6A9A;
+  --legend-light: #DCE6F2;
+  --legend-light-outline: #9FB3CB;
+
+  --font-display: "Newsreader", Georgia, serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  --gutter: 20px;          /* phone gutters (D3) */
+  --content-width: 1200px; /* content width; gives 120 px side margins at 1440 px */
+}
+
+/* ---------- Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 
 html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: var(--font-body);
   font-size: 17px;
   line-height: 1.6;
-  color: #1B2430;
-  background: #FAFAF7;
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--ivory);
 }
+
+img { max-width: 100%; height: auto; }
+
+p { margin: 0 0 var(--space-4); }
+
+a { color: var(--link); text-decoration: underline; text-underline-offset: 0.15em; }
+a:hover { color: var(--link-hover); }
+
+main:focus { outline: none; }
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: calc(var(--content-width) + 2 * var(--gutter));
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--gutter);
 }
+
+/* Keep long lines to roughly 60 to 75 characters */
+.measure { max-width: 68ch; }
 
 .visually-hidden {
   position: absolute;
@@ -33,27 +122,183 @@ body {
   border: 0;
 }
 
-/* Skip link: off screen until it receives keyboard focus */
+/* ---------- Type scale (D1) ---------- */
+h1, h2, h3 {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--navy);
+}
+
+h1 { font-size: 35px; line-height: 1.1; }          /* inner pages */
+h2 { font-size: 32px; line-height: 1.15; }
+h3 { font-size: 25px; line-height: 1.25; }
+
+.display-name { font-size: 47px; line-height: 1.02; margin-bottom: var(--space-4); } /* Home name */
+
+.positioning {
+  margin-bottom: var(--space-4);
+  font-family: var(--font-display);
+  font-size: 26px;
+  line-height: 1.22;
+  font-weight: 400;
+  color: var(--navy);
+}
+
+.lede { font-size: 18px; max-width: 60ch; }
+
+.text-secondary { font-size: 15px; line-height: 1.5; color: var(--slate); }
+
+/* Small labels: 12 to 13 px, uppercase, bronze */
+.label {
+  display: block;
+  margin: 0 0 var(--space-2);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--bronze);
+}
+
+@media (min-width: 900px) {
+  body { font-size: 18px; }
+  h1 { font-size: 60px; }
+  h2 { font-size: 44px; }
+  h3 { font-size: 30px; }
+  .display-name { font-size: 76px; }
+  .positioning { font-size: 36px; }
+  .lede { font-size: 20px; }
+}
+
+/* ---------- Focus (D3): 3 px outline offset 3 px; white on navy bands ---------- */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: 3px;
+}
+.band--navy a:focus-visible,
+.band--navy button:focus-visible {
+  outline-color: var(--white);
+}
+
+/* ---------- Skip link ---------- */
 .skip-link {
   position: absolute;
   top: 0;
   left: 12px;
   z-index: 100;
   padding: 12px 16px;
-  color: #FFFFFF;
-  background: #1F3A5F;
+  color: var(--white);
+  background: var(--navy);
   transform: translateY(-120%);
 }
 .skip-link:focus { transform: translateY(12px); }
+.skip-link:hover { color: var(--white); }
 
-main:focus { outline: none; }
+/* ---------- Bands (alternating grounds, no heavy borders) ---------- */
+.band { padding: var(--space-7) 0; }
+.band--ivory { background: var(--ivory); }
+.band--white { background: var(--white); }
+.band--mist  { background: var(--mist); }
+.band--navy  { background: var(--navy); color: var(--white); }
+.band--navy h1, .band--navy h2, .band--navy h3 { color: var(--white); }
+.band--navy a { color: var(--white); }
+.band--navy .text-secondary { color: var(--pale); }
+.band--navy .label { color: var(--pale); }
 
-a { color: #1F4E8C; }
+@media (min-width: 900px) {
+  .band { padding: var(--space-9) 0; }
+}
 
-/* Header */
+/* ---------- Buttons and links (44 px minimum target, D3) ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 var(--space-5);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  border: 2px solid var(--navy);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn--primary { color: var(--white); background: var(--navy); }
+.btn--primary:hover { color: var(--white); background: var(--link-hover); border-color: var(--link-hover); }
+.btn--secondary { color: var(--navy); background: var(--white); }
+.btn--secondary:hover { color: var(--link-hover); border-color: var(--link-hover); }
+.band--navy .btn--primary { color: var(--navy); background: var(--white); border-color: var(--white); }
+.band--navy .btn--primary:hover { color: var(--link-hover); }
+.band--navy .btn--secondary { color: var(--white); background: transparent; border-color: var(--white); }
+
+.btn-row { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-5); }
+
+/* External links: a small arrow, plus a hidden text hint in the markup */
+.link-external::after {
+  content: "\2197";
+  margin-left: 0.25em;
+  font-size: 0.9em;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.link-more {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 500;
+}
+
+/* ---------- Section heading row ---------- */
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-5);
+  margin-bottom: var(--space-5);
+}
+.section-head h2 { margin-bottom: 0; }
+
+/* ---------- Cards (D3) ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.card {
+  padding: var(--space-5);
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+}
+.band--white .card { background: var(--ivory); }
+.card h3 { margin-bottom: var(--space-3); font-size: 24px; }
+.card p:last-child { margin-bottom: 0; }
+
+/* Chapter cards: 3 px navy top rule */
+.card--chapter { border-top: 3px solid var(--navy); }
+
+@media (min-width: 768px) {
+  .card-grid--3 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 900px) {
+  .card h3 { font-size: 28px; }
+}
+
+/* ---------- Site header (88 px desktop, 64 px mobile) ---------- */
 .site-header {
-  background: #FFFFFF;
-  border-bottom: 1px solid #D9DDE3;
+  background: var(--white);
+  border-bottom: 1px solid var(--rule);
 }
 .site-header__inner {
   display: flex;
@@ -66,82 +311,93 @@ a { color: #1F4E8C; }
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  font-size: 24px;
-  font-weight: 600;
-  color: #1F3A5F;
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--navy);
   text-decoration: none;
 }
+.wordmark:hover { color: var(--link-hover); }
 
 .menu-button {
   display: none;
   min-width: 44px;
   min-height: 44px;
-  padding: 0 16px;
-  font: inherit;
+  padding: 0 var(--space-4);
+  font-family: var(--font-body);
+  font-size: 16px;
   font-weight: 600;
-  color: #1F3A5F;
-  background: #FFFFFF;
-  border: 2px solid #1F3A5F;
+  color: var(--navy);
+  background: var(--white);
+  border: 2px solid var(--navy);
   border-radius: 4px;
   cursor: pointer;
 }
-.js .menu-button { display: inline-block; }
+.js .menu-button { display: inline-flex; align-items: center; }
 
 .site-nav { flex-basis: 100%; }
 .site-nav ul {
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 0 0 12px;
+  padding: var(--space-2) 0 var(--space-3);
   list-style: none;
 }
 .site-nav a {
   display: flex;
   align-items: center;
   min-height: 44px;
-  color: #1B2430;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
   text-decoration: none;
   border-bottom: 2px solid transparent;
 }
-.site-nav a[aria-current="page"] { border-bottom-color: #1F3A5F; }
+.site-nav a:hover { color: var(--link-hover); }
+.site-nav a[aria-current="page"] { border-bottom-color: var(--navy); }
 
 /* Below about 900 px the links sit behind the Menu button (only when scripts run) */
 @media (max-width: 899px) {
   .js .site-nav { display: none; }
   .js .menu-button[aria-expanded="true"] + .site-nav { display: block; }
+  .js .menu-button[aria-expanded="true"] { background: var(--mist); }
 }
 
 @media (min-width: 900px) {
   .site-header__inner { min-height: 88px; flex-wrap: nowrap; }
+  .wordmark { font-size: 28px; }
   .js .menu-button { display: none; }
   .site-nav { flex-basis: auto; }
-  .site-nav ul { flex-direction: row; gap: 32px; padding: 0; }
+  .site-nav ul { flex-direction: row; gap: var(--space-6); padding: 0; }
+  .site-nav a { min-height: 88px; border-bottom-width: 2px; padding-top: 2px; }
 }
 
-/* Breadcrumbs */
-.breadcrumb { font-size: 15px; }
+/* ---------- Breadcrumbs ---------- */
+.breadcrumb { font-size: 15px; color: var(--slate); }
 .breadcrumb ol {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  padding: 16px 0;
+  padding: var(--space-4) 0;
   list-style: none;
 }
-.breadcrumb li + li::before { content: "/"; padding: 0 8px; color: #4A5563; }
+.breadcrumb li + li::before { content: "/"; padding: 0 var(--space-2); color: var(--slate); }
+.breadcrumb a { display: inline-flex; align-items: center; min-height: 24px; }
 
-/* Footer */
+/* ---------- Footer ---------- */
 .site-footer {
-  margin-top: 64px;
-  padding: 32px 0;
+  padding: var(--space-6) 0;
   font-size: 15px;
-  color: #4A5563;
-  border-top: 1px solid #D9DDE3;
+  line-height: 1.5;
+  color: var(--slate);
+  background: var(--white);
+  border-top: 1px solid var(--rule);
 }
 .footer-nav ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 24px;
-  margin: 0 0 16px;
+  gap: var(--space-1) var(--space-5);
+  margin: 0 0 var(--space-4);
   padding: 0;
   list-style: none;
 }
