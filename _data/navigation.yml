@@ -1,9 +1,16 @@
-# Site navigation (Build Handoff Part C: global and footer navigation)
+# Site navigation (Build Handoff Part C: global and footer navigation).
+# Sub-pages under "children" appear only in the mobile menu (approved mobile menu design).
 main:
   - title: Experience
     url: /experience/
+    children:
+      - title: Career History
+        url: /experience/career-history/
   - title: Impact
     url: /impact/
+    children:
+      - title: Guidewire Marketplace accelerators
+        url: /impact/guidewire-marketplace-accelerators/
   - title: Technology
     url: /technology/
   - title: About
