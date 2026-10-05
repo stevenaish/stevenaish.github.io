@@ -1,0 +1,17 @@
+<footer class="site-footer">
+  <div class="container">
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        {%- for item in site.data.navigation.footer -%}
+        {%- if item.external -%}
+        <li><a href="{{ item.url }}">{{ item.title }}<span class="visually-hidden"> (opens external site)</span></a></li>
+        {%- else -%}
+        <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </nav>
+    <p class="footer-line">Steve Naish | stevenaish.com | Public professional profile</p>
+    <p class="footer-updated">Content updated {{ site.content_updated }}</p>
+  </div>
+</footer>

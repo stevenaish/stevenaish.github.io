@@ -127,12 +127,11 @@ content:
 # Footer
 footer_show_references: true
 
-# Build settings
-remote_theme: sproogen/resume-theme
+# Footer date: the launch month and year (build list item 18 sets this)
+content_updated: "[launch month, to be set in item 18]"
 
-sass:
-  sass_dir: _sass
-  style: compressed
+# Build settings (no theme: the site has its own layouts and stylesheet)
+theme: null
 
 plugins:
  - jekyll-seo-tag
