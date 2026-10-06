@@ -70,8 +70,8 @@ breadcrumb:
       <p>LinkedIn is the best way to reach me professionally.</p>
     </div>
     <div class="btn-row">
-      <a class="btn btn--primary link-external" href="https://www.linkedin.com/in/stevenaish/">Connect on LinkedIn<span class="visually-hidden"> (opens external site)</span></a>
-      <a class="btn btn--secondary link-external" href="https://x.com/stevenaish">X profile<span class="visually-hidden"> (opens external site)</span></a>
+      <a class="btn btn--primary link-external" href="https://www.linkedin.com/in/stevenaish/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+      <a class="btn btn--secondary link-external" href="https://x.com/stevenaish" target="_blank" rel="noopener noreferrer">X profile<span class="visually-hidden"> (opens in a new tab)</span></a>
     </div>
   </div>
 </section>

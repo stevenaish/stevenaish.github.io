@@ -73,7 +73,7 @@ scripts:
           <li>Created the divisional digital strategy and led evaluation and selection of fintech partners.</li>
           <li>Implemented information security protocols across the new division and acquired companies.</li>
         </ul>
-        <p class="coverage">Coverage: <a href="https://www.mdjonline.com/news/business/steve-naish-joins-fifth-third-bank/article_8f0ac012-5a9c-11e6-8099-cb6774a39004.html">Marietta Daily Journal, August 4, 2016</a>, reporting Fifth Third Bank's announcement that I had joined as vice president and chief information officer of insurance (subscription may be required). <a href="/impact/#coverage">Public coverage</a></p>
+        <p class="coverage">Coverage: <a href="https://www.mdjonline.com/news/business/steve-naish-joins-fifth-third-bank/article_8f0ac012-5a9c-11e6-8099-cb6774a39004.html" target="_blank" rel="noopener noreferrer">Marietta Daily Journal, August 4, 2016<span class="visually-hidden"> (opens in a new tab)</span></a>, reporting Fifth Third Bank's announcement that I had joined as vice president and chief information officer of insurance (subscription may be required). <a href="/impact/#coverage">Public coverage</a></p>
       </div>
     </article>
     <article class="role" id="catlin" aria-labelledby="catlin-h">
@@ -87,7 +87,7 @@ scripts:
           <li>Program budget of more than 80 million dollars; the operational data store, serving all three core modules, was in production in under seven months.</li>
           <li>Before the program, led the SAP FS-RI run team for assumed and ceded reinsurance and helped retire the prior reinsurance system.</li>
           <li>With the Chief Claims Officer, implemented document management, document generation, OCR, and matter management.</li>
-          <li>Quoted in Guidewire's announcement of Catlin's selection of InsuranceSuite for underwriting, rating, policy administration, billing, and claims. <a href="https://www.guidewire.com/about/press-center/press-releases/20131015/catlin-group-selects-guidewire-solution">Guidewire, October 15, 2013</a></li>
+          <li>Quoted in Guidewire's announcement of Catlin's selection of InsuranceSuite for underwriting, rating, policy administration, billing, and claims. <a href="https://www.guidewire.com/about/press-center/press-releases/20131015/catlin-group-selects-guidewire-solution" target="_blank" rel="noopener noreferrer">Guidewire, October 15, 2013<span class="visually-hidden"> (opens in a new tab)</span></a></li>
         </ul>
         <p class="note">Corporate history: XL Group completed its acquisition of Catlin Group Limited on May 1, 2015, with the combined business subsequently marketed as XL Catlin. AXA completed its acquisition of XL Group on September 12, 2018, marking the transition into AXA XL.</p>
       </div>
@@ -131,7 +131,7 @@ scripts:
       <p class="role__title">Co-founder, Chief Information Officer, and Vice President of Service Operations</p>
       <div class="role__body">
         <p>Co-founded MyBenefitSource with the same leadership team from <a href="#esi">Employee Solutions-East, Inc.</a> The company was a national provider of outsourced payroll, benefits, life, retirement, and workers' compensation services, licensed as an insurance agency in 47 US states. Designed and built the web-based SingleSource platform that distributed insurance through the payroll channel; the company raised capital, including a strategic investment from Aegon. The transaction with H&amp;R Block began in 2001, with the overall ownership and operational transition completed in 2003.</p>
-        <p class="coverage">Coverage: <a href="https://www.bizjournals.com/milwaukee/stories/2002/01/28/daily57.html">The Business Journal of Milwaukee, published January 31, 2002; updated February 1, 2002</a>, on MyBenefitSource's Pleasant Prairie service center (subscription may be required). <a href="/impact/#coverage">Public coverage</a></p>
+        <p class="coverage">Coverage: <a href="https://www.bizjournals.com/milwaukee/stories/2002/01/28/daily57.html" target="_blank" rel="noopener noreferrer">The Business Journal of Milwaukee, published January 31, 2002; updated February 1, 2002<span class="visually-hidden"> (opens in a new tab)</span></a>, on MyBenefitSource's Pleasant Prairie service center (subscription may be required). <a href="/impact/#coverage">Public coverage</a></p>
       </div>
     </article>
     <article class="role" id="psmi" aria-labelledby="psmi-h">

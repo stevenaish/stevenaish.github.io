@@ -4,7 +4,7 @@
       <ul>
         {%- for item in site.data.navigation.footer -%}
         {%- if item.external -%}
-        <li><a href="{{ item.url }}">{{ item.title }}<span class="visually-hidden"> (opens external site)</span></a></li>
+        <li><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}<span class="visually-hidden"> (opens in a new tab)</span></a></li>
         {%- else -%}
         <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
         {%- endif -%}

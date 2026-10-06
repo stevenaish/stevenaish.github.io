@@ -10,7 +10,7 @@ title: "Steve Naish | Insurance Technology & Business Transformation"
       <p class="lede">More than 30 years across insurance, business operations, and technology, from building companies to leading transformation and platform organizations.</p>
       <div class="btn-row">
         <a class="btn btn--primary" href="/experience/">Experience</a>
-        <a class="btn btn--secondary link-external" href="https://www.linkedin.com/in/stevenaish/">LinkedIn<span class="visually-hidden"> (opens external site)</span></a>
+        <a class="btn btn--secondary link-external" href="https://www.linkedin.com/in/stevenaish/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
       </div>
     </div>
     <figure class="hero__portrait">
@@ -114,8 +114,8 @@ title: "Steve Naish | Insurance Technology & Business Transformation"
       <p>LinkedIn is the best way to reach me professionally.</p>
     </div>
     <div class="btn-row">
-      <a class="btn btn--primary link-external" href="https://www.linkedin.com/in/stevenaish/">Connect on LinkedIn<span class="visually-hidden"> (opens external site)</span></a>
-      <a class="btn btn--secondary link-external" href="https://x.com/stevenaish">X profile<span class="visually-hidden"> (opens external site)</span></a>
+      <a class="btn btn--primary link-external" href="https://www.linkedin.com/in/stevenaish/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+      <a class="btn btn--secondary link-external" href="https://x.com/stevenaish" target="_blank" rel="noopener noreferrer">X profile<span class="visually-hidden"> (opens in a new tab)</span></a>
     </div>
   </div>
 </section>

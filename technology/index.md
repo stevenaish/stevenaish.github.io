@@ -40,7 +40,7 @@ breadcrumb:
         <span class="label">Earlier, 2012 onward</span>
         <h3>Catlin's selection and Project Phoenix</h3>
         <p>Led Catlin's 2012 core-system selection, which selected Guidewire. Subsequently led the technology and data workstreams of Project Phoenix, a complex business transformation centered on Guidewire InsuranceSuite and a custom-developed operational data store.</p>
-        <p>Guidewire announced Catlin's selection of InsuranceSuite in October 2013 and quoted me in the announcement. <a href="https://www.guidewire.com/about/press-center/press-releases/20131015/catlin-group-selects-guidewire-solution">Guidewire announcement, October 15, 2013</a></p>
+        <p>Guidewire announced Catlin's selection of InsuranceSuite in October 2013 and quoted me in the announcement. <a href="https://www.guidewire.com/about/press-center/press-releases/20131015/catlin-group-selects-guidewire-solution" target="_blank" rel="noopener noreferrer">Guidewire announcement, October 15, 2013<span class="visually-hidden"> (opens in a new tab)</span></a></p>
         <p class="text-secondary"><a href="/experience/career-history/#catlin">Catlin and XL Catlin in Career History</a></p>
       </li>
       <li class="card">
