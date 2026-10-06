@@ -822,7 +822,13 @@ button:focus-visible,
   text-decoration: none;
 }
 .footer-nav a:hover { color: var(--link-hover); text-decoration: underline; }
-.footer-line, .footer-updated { margin: 0; }
+.footer-line, .footer-copyright, .footer-updated { margin: 0; }
+
+/* Print: the footer text lines (provenance, copyright, date) always print.
+   Build list item 15 adds the rest of the print rules. */
+@media print {
+  .footer-line, .footer-copyright, .footer-updated { display: block; color: #000; }
+}
 
 @media (min-width: 768px) {
   .footer-nav ul { display: flex; flex-wrap: wrap; gap: 0 var(--space-5); }
