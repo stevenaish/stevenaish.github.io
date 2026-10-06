@@ -80,50 +80,11 @@ breadcrumb:
   </div>
 </section>
 
-<section class="band band--white" id="coverage" aria-labelledby="impact-coverage">
-  <div class="container coverage-layout">
-    <div>
-      <h2 id="impact-coverage">Public coverage</h2>
-      <p class="text-secondary">Published announcements and reporting that name me, summarized here in my own words and linked to the original source. Titles and roles are as published at the time.</p>
-    </div>
-    <ol class="coverage-list">
-      <li class="cov-item">
-        <div class="cov-item__meta"><span class="cov-item__date">January 19, 2023</span><span class="label">Company announcement</span></div>
-        <div>
-          <p class="cov-item__headline"><a href="https://news.cognizant.com/2023-01-19-Everest-Group-Names-Cognizant-a-Leader-for-Guidewire-Services" target="_blank" rel="noopener noreferrer">Everest Group Names Cognizant a Leader for Guidewire Services<span class="visually-hidden"> (opens in a new tab)</span></a></p>
-          <p class="text-secondary cov-item__source">Cognizant news release</p>
-          <p>Cognizant's announcement of Everest Group's Guidewire Services PEAK Matrix Assessment 2023 quoted me as the practice's spokesperson. The recognition belongs to Cognizant.</p>
-          <p class="text-secondary">Related: <a href="/experience/career-history/#cognizant">Cognizant in Career History</a></p>
-        </div>
-      </li>
-      <li class="cov-item">
-        <div class="cov-item__meta"><span class="cov-item__date">August 4, 2016</span><span class="label">Newspaper coverage</span></div>
-        <div>
-          <p class="cov-item__headline"><a href="https://www.mdjonline.com/news/business/steve-naish-joins-fifth-third-bank/article_8f0ac012-5a9c-11e6-8099-cb6774a39004.html" target="_blank" rel="noopener noreferrer">Steve Naish joins Fifth Third Bank<span class="visually-hidden"> (opens in a new tab)</span></a></p>
-          <p class="text-secondary cov-item__source">Marietta Daily Journal (subscription may be required)</p>
-          <p>The Marietta Daily Journal reported Fifth Third Bank's announcement that Steve Naish had joined as vice president and chief information officer of insurance.</p>
-          <p class="text-secondary"><a href="/experience/career-history/#fifththird">Fifth Third Bank in Career History</a></p>
-        </div>
-      </li>
-      <li class="cov-item">
-        <div class="cov-item__meta"><span class="cov-item__date">October 15, 2013</span><span class="label">Vendor announcement</span></div>
-        <div>
-          <p class="cov-item__headline"><a href="https://www.guidewire.com/about/press-center/press-releases/20131015/catlin-group-selects-guidewire-solution" target="_blank" rel="noopener noreferrer">Catlin Group Selects Guidewire Solution for Underwriting, Rating, Policy Administration, Billing, and Claims Management<span class="visually-hidden"> (opens in a new tab)</span></a></p>
-          <p class="text-secondary cov-item__source">Guidewire press release</p>
-          <p>Quoted in Guidewire's announcement of Catlin's selection of InsuranceSuite for underwriting, rating, policy administration, billing, and claims. The release reflects my role at the time, not my current title.</p>
-          <p class="text-secondary">Related: <a href="/experience/career-history/#catlin">Catlin and XL Catlin in Career History</a></p>
-        </div>
-      </li>
-      <li class="cov-item">
-        <div class="cov-item__meta"><span class="cov-item__date">Published January 31, 2002; updated February 1, 2002</span><span class="label">Newspaper coverage</span></div>
-        <div>
-          <p class="cov-item__headline"><a href="https://www.bizjournals.com/milwaukee/stories/2002/01/28/daily57.html" target="_blank" rel="noopener noreferrer">H&amp;R Block unit opens office in Pleasant Prairie<span class="visually-hidden"> (opens in a new tab)</span></a></p>
-          <p class="text-secondary cov-item__source">The Business Journal of Milwaukee (subscription may be required)</p>
-          <p>The Business Journal of Milwaukee reported on MyBenefitSource's Pleasant Prairie service center and cited Steve Naish, then vice president of operations, discussing the choice of location to support its growing Midwest client base.</p>
-          <p class="text-secondary"><a href="/experience/career-history/#mbs">MyBenefitSource in Career History</a></p>
-        </div>
-      </li>
-    </ol>
+<section class="band band--white" aria-labelledby="impact-coverage">
+  <div class="container">
+    <h2 id="impact-coverage">Public coverage</h2>
+    <p>Published announcements and reporting that name me are collected on the In the News page.</p>
+    <a class="link-more" href="/in-the-news/">See all public coverage</a>
   </div>
 </section>
 

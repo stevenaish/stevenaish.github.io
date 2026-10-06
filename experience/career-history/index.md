@@ -73,7 +73,7 @@ scripts:
           <li>Created the divisional digital strategy and led evaluation and selection of fintech partners.</li>
           <li>Implemented information security protocols across the new division and acquired companies.</li>
         </ul>
-        <p class="coverage">Coverage: <a href="https://www.mdjonline.com/news/business/steve-naish-joins-fifth-third-bank/article_8f0ac012-5a9c-11e6-8099-cb6774a39004.html" target="_blank" rel="noopener noreferrer">Marietta Daily Journal, August 4, 2016<span class="visually-hidden"> (opens in a new tab)</span></a>, reporting Fifth Third Bank's announcement that I had joined as vice president and chief information officer of insurance (subscription may be required). <a href="/impact/#coverage">Public coverage</a></p>
+        <p class="coverage">Coverage: <a href="https://www.mdjonline.com/news/business/steve-naish-joins-fifth-third-bank/article_8f0ac012-5a9c-11e6-8099-cb6774a39004.html" target="_blank" rel="noopener noreferrer">Marietta Daily Journal, August 4, 2016<span class="visually-hidden"> (opens in a new tab)</span></a>, reporting Fifth Third Bank's announcement that I had joined as vice president and chief information officer of insurance (subscription may be required). <a href="/in-the-news/">Public coverage</a></p>
       </div>
     </article>
     <article class="role" id="catlin" aria-labelledby="catlin-h">
@@ -131,7 +131,7 @@ scripts:
       <p class="role__title">Co-founder, Chief Information Officer, and Vice President of Service Operations</p>
       <div class="role__body">
         <p>Co-founded MyBenefitSource with the same leadership team from <a href="#esi">Employee Solutions-East, Inc.</a> The company was a national provider of outsourced payroll, benefits, life, retirement, and workers' compensation services, licensed as an insurance agency in 47 US states. Designed and built the web-based SingleSource platform that distributed insurance through the payroll channel; the company raised capital, including a strategic investment from Aegon. The transaction with H&amp;R Block began in 2001, with the overall ownership and operational transition completed in 2003.</p>
-        <p class="coverage">Coverage: <a href="https://www.bizjournals.com/milwaukee/stories/2002/01/28/daily57.html" target="_blank" rel="noopener noreferrer">The Business Journal of Milwaukee, published January 31, 2002; updated February 1, 2002<span class="visually-hidden"> (opens in a new tab)</span></a>, on MyBenefitSource's Pleasant Prairie service center (subscription may be required). <a href="/impact/#coverage">Public coverage</a></p>
+        <p class="coverage">Coverage: <a href="https://www.bizjournals.com/milwaukee/stories/2002/01/28/daily57.html" target="_blank" rel="noopener noreferrer">The Business Journal of Milwaukee, published January 31, 2002; updated February 1, 2002<span class="visually-hidden"> (opens in a new tab)</span></a>, on MyBenefitSource's Pleasant Prairie service center (subscription may be required). <a href="/in-the-news/">Public coverage</a></p>
       </div>
     </article>
     <article class="role" id="psmi" aria-labelledby="psmi-h">

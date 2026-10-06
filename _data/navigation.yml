@@ -11,6 +11,8 @@ main:
     children:
       - title: Guidewire Marketplace accelerators
         url: /impact/guidewire-marketplace-accelerators/
+  - title: In the News
+    url: /in-the-news/
   - title: Technology
     url: /technology/
   - title: About

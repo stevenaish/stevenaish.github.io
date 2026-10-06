@@ -466,6 +466,7 @@ button:focus-visible,
 
 /* ---------- Technology page ---------- */
 .band--flush-top { padding-top: 0; }
+.band--tight-bottom { padding-bottom: var(--space-5); }
 .card-grid--spaced { margin-top: var(--space-5); }
 .box__title--lg { font-size: 26px; }
 
@@ -516,6 +517,19 @@ button:focus-visible,
 .card--listing .link-more { margin-top: auto; }
 .related-title { margin-bottom: var(--space-4); font-size: 26px; }
 .band--mist .pill-row { margin-top: 0; }
+
+/* ---------- In the News: quotation under each coverage entry ---------- */
+.coverage-quote {
+  margin: var(--space-3) 0 var(--space-4);
+  padding: 0 0 0 var(--space-4);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--slate);
+  border-left: 3px solid var(--rule);
+}
+.coverage-quote p { margin: 0 0 var(--space-2); }
+.coverage-quote p:last-child { margin-bottom: 0; }
+.coverage-quote__lead { font-weight: 500; }
 
 /* ---------- Impact ---------- */
 .card h4 { margin: 0 0 var(--space-3); font-family: var(--font-display); font-size: 24px; line-height: 1.25; font-weight: 500; color: var(--navy); }
