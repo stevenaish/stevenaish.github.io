@@ -133,6 +133,15 @@ content_updated: "[launch month, to be set in item 18]"
 # Build settings (no theme: the site has its own layouts and stylesheet)
 theme: null
 
+# Files that stay in the repository only and are not published on the site.
+# CNAME is listed because GitHub Pages excludes it by default, and that default
+# is dropped as soon as this list exists. The CNAME file itself is not changed.
+exclude:
+  - CNAME
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+
 plugins:
  - jekyll-seo-tag
  - jekyll-sitemap
