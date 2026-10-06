@@ -14,7 +14,7 @@ breadcrumb:
   <div class="container coverage-layout">
     <div>
       <h2 id="news-coverage">Public coverage</h2>
-      <p class="text-secondary">Published announcements and reporting that name me, summarized here in my own words and linked to the original source. Titles and roles are as published at the time.</p>
+      <p class="text-secondary">Published announcements and reporting that name me, summarized here in my own words and linked to the original source. Titles and roles are as published at the time. Two newspaper articles are also available as archival copies, reproduced with permission.</p>
     </div>
     <ol class="coverage-list">
       <li class="cov-item">
@@ -34,6 +34,7 @@ breadcrumb:
           <p class="text-secondary cov-item__source">Marietta Daily Journal (subscription may be required)</p>
           <p>The Marietta Daily Journal reported Fifth Third Bank's announcement that Steve Naish had joined as vice president and chief information officer of insurance.</p>
           <blockquote class="coverage-quote"><p class="coverage-quote__lead">From the article:</p><p>Fifth Third Bank, which has locations in the Marietta and Kennesaw areas, announced that Steve Naish has joined the bank's Information Technology division as vice president and chief information officer of insurance.</p></blockquote>
+          <p class="cov-item__pdf"><a href="/coverage/2016-marietta-daily-journal-steve-naish-joins-fifth-third-bank.pdf" target="_blank" rel="noopener noreferrer">Archival PDF: Steve Naish joins Fifth Third Bank, Marietta Daily Journal, 2016 (PDF)<span class="visually-hidden"> (opens in a new tab)</span></a></p>
           <p class="text-secondary"><a href="/experience/career-history/#fifththird">Fifth Third Bank in Career History</a></p>
         </div>
       </li>
@@ -54,6 +55,7 @@ breadcrumb:
           <p class="text-secondary cov-item__source">The Business Journal of Milwaukee (subscription may be required)</p>
           <p>The Business Journal of Milwaukee reported on MyBenefitSource's Pleasant Prairie service center and cited Steve Naish, then vice president of operations, discussing the choice of location to support its growing Midwest client base.</p>
           <blockquote class="coverage-quote"><p class="coverage-quote__lead">From the article:</p><p>The Pleasant Prairie location was selected to meet the needs of the increased client base in the Midwest, said Steve Naish, vice president of operations for MyBenefitSource. The company will open a total of five regional service centers across the United States.</p></blockquote>
+          <p class="cov-item__pdf"><a href="/coverage/2002-business-journal-milwaukee-mybenefitsource-pleasant-prairie.pdf" target="_blank" rel="noopener noreferrer">Archival PDF: H&amp;R Block unit opens office in Pleasant Prairie, The Business Journal of Milwaukee, 2002 (PDF)<span class="visually-hidden"> (opens in a new tab)</span></a></p>
           <p class="text-secondary"><a href="/experience/career-history/#mbs">MyBenefitSource in Career History</a></p>
         </div>
       </li>
