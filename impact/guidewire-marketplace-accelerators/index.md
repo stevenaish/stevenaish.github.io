@@ -1,6 +1,7 @@
 ---
 layout: base
 title: "Guidewire Marketplace Accelerators | Steve Naish"
+description: "Eleven accelerators published to the Guidewire Marketplace by Cognizant teams Steve Naish led: nine insurance product models and two platform and data tools."
 breadcrumb:
   - title: Impact
     url: /impact/

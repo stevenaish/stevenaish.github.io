@@ -1,6 +1,7 @@
 ---
 layout: base
 title: "In the News | Steve Naish"
+description: "Public coverage that names Steve Naish: announcements from Cognizant and Guidewire and two newspaper articles, summarized with links to the original sources and archival PDF copies of the two articles."
 breadcrumb:
   - title: In the News
 ---

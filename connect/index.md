@@ -1,6 +1,7 @@
 ---
 layout: base
 title: "Connect | Steve Naish"
+description: "Connect with Steve Naish on LinkedIn or X."
 breadcrumb:
   - title: Connect
 ---

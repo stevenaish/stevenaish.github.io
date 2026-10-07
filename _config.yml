@@ -2,6 +2,11 @@
 favicon: images/favicon.ico
 url: https://stevenaish.com
 
+# Address used for canonical links, Open Graph tags, and structured data.
+# Kept separate from "url" because "jekyll serve" replaces "url" with the
+# local preview address, and these tags must always name the real site.
+canonical_host: https://stevenaish.com
+
 # Content configuration version
 version: 2
 
@@ -141,6 +146,14 @@ exclude:
   - LICENSE
   - Gemfile
   - Gemfile.lock
+
+# Keep the old forwarding file out of the sitemap. This only sets a flag for
+# the sitemap plugin; the file itself is not edited, wrapped, or processed.
+defaults:
+  - scope:
+      path: "marketplace/index.html"
+    values:
+      sitemap: false
 
 plugins:
  - jekyll-seo-tag

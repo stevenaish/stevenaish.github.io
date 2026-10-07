@@ -1,6 +1,7 @@
 ---
 layout: base
 title: "Experience | Steve Naish"
+description: "Three career chapters: Builder, Insurance Company Executive, and Consulting Services Leader, with links to the full career history."
 breadcrumb:
   - title: Experience
 ---

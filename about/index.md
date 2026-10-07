@@ -1,6 +1,7 @@
 ---
 layout: base
 title: "About | Steve Naish"
+description: "About Steve Naish: more than 30 years across insurance, business operations, and technology, from building companies to leading transformation and platform organizations."
 breadcrumb:
   - title: About
 ---

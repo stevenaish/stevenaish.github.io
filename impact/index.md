@@ -1,6 +1,7 @@
 ---
 layout: base
 title: "Selected Impact | Steve Naish"
+description: "Selected results from Steve Naish's career, from Guidewire Marketplace accelerators at Cognizant to core-system transformation at Catlin, with public coverage and company recognition."
 breadcrumb:
   - title: Impact
 ---

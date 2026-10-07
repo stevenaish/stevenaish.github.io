@@ -1,6 +1,8 @@
 ---
 layout: base
 title: "Steve Naish | Insurance Technology & Business Transformation"
+description: "Steve Naish: business transformation leadership across insurance, technology, and consulting, from building companies to leading transformation and platform organizations."
+schema: home
 ---
 <section class="band band--ivory">
   <div class="container hero">

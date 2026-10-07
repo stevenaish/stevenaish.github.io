@@ -1,6 +1,8 @@
 ---
 layout: base
 title: "Career History | Steve Naish"
+description: "Steve Naish's career history: Cognizant, WGroup and WorkBest, Fifth Third Bank, Catlin and XL Catlin, Munich Re, All Risks, AIG, MyBenefitSource, PSMI, and Employee Solutions-East."
+schema: profile
 breadcrumb:
   - title: Experience
     url: /experience/

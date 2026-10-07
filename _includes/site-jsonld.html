@@ -1,0 +1,121 @@
+{%- comment -%}
+  Structured data (JSON-LD), Build Handoff F3. Every value comes from the page's
+  own front matter, _data/person.yml, or the same breadcrumb list that draws the
+  visible breadcrumb, so it always matches what is shown on the page.
+
+  page.schema:
+    home     Person and WebSite
+    profile  ProfilePage and the fuller Person (Career History)
+    webpage  WebPage with plain "mentions" (Technology)
+  Any page with a breadcrumb also gets a BreadcrumbList.
+  Never added: credentials, vendor membership, sponsors, awards, or availability.
+{%- endcomment -%}
+{%- assign host = site.canonical_host -%}
+{%- assign who = site.data.person -%}
+{%- assign person_id = host | append: '/#person' -%}
+{%- assign page_url = host | append: page.url -%}
+{%- if page.schema == 'home' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": {{ person_id | jsonify }},
+      "name": {{ who.name | jsonify }},
+      "url": {{ host | append: '/' | jsonify }},
+      "image": {{ host | append: '/assets/img/steve-naish-portrait-square-800.jpg' | jsonify }},
+      "description": {{ who.description | jsonify }},
+      "worksFor": {
+        "@type": "Organization",
+        "name": {{ who.employer | jsonify }}
+      },
+      "sameAs": {{ who.same_as | jsonify }}
+    },
+    {
+      "@type": "WebSite",
+      "@id": {{ host | append: '/#website' | jsonify }},
+      "url": {{ host | append: '/' | jsonify }},
+      "name": {{ who.name | jsonify }},
+      "publisher": { "@id": {{ person_id | jsonify }} }
+    }
+  ]
+}
+</script>
+{%- elsif page.schema == 'profile' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": {{ page_url | append: '#profilepage' | jsonify }},
+      "url": {{ page_url | jsonify }},
+      "name": {{ page.title | jsonify }},
+      "description": {{ page.description | jsonify }},
+      "mainEntity": { "@id": {{ person_id | jsonify }} }
+    },
+    {
+      "@type": "Person",
+      "@id": {{ person_id | jsonify }},
+      "name": {{ who.name | jsonify }},
+      "url": {{ host | append: '/' | jsonify }},
+      "image": {{ host | append: '/assets/img/steve-naish-portrait-square-800.jpg' | jsonify }},
+      "description": {{ who.description | jsonify }},
+      "jobTitle": {{ who.job_title | jsonify }},
+      "worksFor": {
+        "@type": "Organization",
+        "name": {{ who.employer | jsonify }}
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": {{ who.city | jsonify }},
+        "addressRegion": {{ who.region | jsonify }},
+        "addressCountry": {{ who.country | jsonify }}
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": {{ who.alma_mater | jsonify }}
+      },
+      "sameAs": {{ who.same_as | jsonify }}
+    }
+  ]
+}
+</script>
+{%- elsif page.schema == 'webpage' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": {{ page_url | append: '#webpage' | jsonify }},
+  "url": {{ page_url | jsonify }},
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }}
+  {%- if page.schema_mentions %},
+  "mentions": [
+    {%- for name in page.schema_mentions %}
+    { "@type": "Thing", "name": {{ name | jsonify }} }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+  {%- endif %}
+}
+</script>
+{%- endif %}
+{%- if page.breadcrumb %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": {{ host | append: '/' | jsonify }} },
+    {%- for crumb in page.breadcrumb %}
+    {%- if crumb.url %}
+    { "@type": "ListItem", "position": {{ forloop.index | plus: 1 }}, "name": {{ crumb.title | jsonify }}, "item": {{ host | append: crumb.url | jsonify }} }{% unless forloop.last %},{% endunless %}
+    {%- else %}
+    { "@type": "ListItem", "position": {{ forloop.index | plus: 1 }}, "name": {{ crumb.title | jsonify }}, "item": {{ page_url | jsonify }} }{% unless forloop.last %},{% endunless %}
+    {%- endif %}
+    {%- endfor %}
+  ]
+}
+</script>
+{%- endif %}

@@ -1,6 +1,12 @@
 ---
 layout: base
 title: "Guidewire and Insurance Platform Experience | Steve Naish"
+description: "Steve Naish's experience across Guidewire, its surrounding technology ecosystem, and other insurance platforms, labeled by type of involvement. A sampling, not a full list."
+schema: webpage
+schema_mentions:
+  - Guidewire
+  - Earnix
+  - Origami Risk
 breadcrumb:
   - title: Technology
 ---

@@ -1,0 +1,12 @@
+# Facts used in the structured data (JSON-LD). Each one is also visible on the site.
+name: Steve Naish
+description: Business transformation leadership across insurance, technology, and consulting.
+job_title: Guidewire Ecosystem Services Leader
+employer: Cognizant
+city: Atlanta
+region: GA
+country: US
+alma_mater: Miami University
+same_as:
+  - https://www.linkedin.com/in/stevenaish/
+  - https://x.com/stevenaish
