@@ -520,20 +520,22 @@ summary:focus-visible,
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
+/* The small markers are drawn with borders only (no background), so they also print on paper
+   when the browser leaves out background colors: solid = a 9 px square of thick border;
+   half-filled = a thin outline with a thick left side; empty = a thin outline. */
 .chips li::before {
   content: "";
   flex: 0 0 auto;
   box-sizing: border-box;
   width: 9px;
   height: 9px;
-  border: 1.5px solid transparent;
+  border: 1.5px solid var(--legend-dark);
 }
 .chips--dark li { color: var(--white); background: var(--legend-dark); border-color: var(--legend-dark); }
 .chips--dark li::before { background: var(--white); border-color: var(--white); }
 .chips--medium li { color: var(--ink); background: var(--legend-medium); border-color: var(--legend-medium); }
-.chips--medium li::before { background: linear-gradient(90deg, var(--legend-dark) 50%, transparent 50%); border-color: var(--legend-dark); }
+.chips--medium li::before { border-left-width: 4.5px; }
 .chips--light li { color: var(--ink); background: var(--white); border-color: var(--legend-light-outline); }
-.chips--light li::before { background: transparent; border-color: var(--legend-dark); }
 
 /* ---------- Accelerators page ---------- */
 .box--cta { align-self: end; }
@@ -956,17 +958,17 @@ summary:focus-visible,
   /* Involvement markers and platform chips keep their look in print: navy with white text,
      pale blue with dark text, white with an outline, and the three marker shapes. The shapes
      and the outline mean the three kinds stay apart even on a black and white printer. */
-  .swatch, .chips li, .chips li::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .swatch, .chips li { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .swatch { border: 2px solid var(--legend-dark) !important; }
   .swatch--dark { background: var(--legend-dark) !important; }
   .swatch--medium { background: linear-gradient(90deg, var(--legend-dark) 50%, var(--legend-medium) 50%) !important; }
   .swatch--light { background: var(--white) !important; }
   .chips--dark li { color: var(--white) !important; background: var(--legend-dark) !important; border-color: var(--legend-dark) !important; }
-  .chips--dark li::before { background: var(--white) !important; border-color: var(--white) !important; }
   .chips--medium li { color: var(--ink) !important; background: var(--legend-medium) !important; border-color: var(--legend-medium) !important; }
-  .chips--medium li::before { background: linear-gradient(90deg, var(--legend-dark) 50%, transparent 50%) !important; border-color: var(--legend-dark) !important; }
   .chips--light li { color: var(--ink) !important; background: var(--white) !important; border-color: var(--legend-light-outline) !important; }
-  .chips--light li::before { background: transparent !important; border-color: var(--legend-dark) !important; }
+  /* the chip markers are borders, which always print; keep their colors explicit */
+  .chips li::before { border-color: var(--legend-dark) !important; }
+  .chips--dark li::before { border-color: var(--white) !important; background: var(--white) !important; }
 
   /* Removed in print: navigation, menu button, print button, footer navigation, buttons. */
   .skip-link, .site-header, .breadcrumb, .footer-nav, .print-button, .btn, .btn-row,
