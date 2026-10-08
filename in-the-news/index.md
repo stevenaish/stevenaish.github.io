@@ -1,7 +1,7 @@
 ---
 layout: base
 title: "In the News | Steve Naish"
-description: "Public coverage that names Steve Naish: announcements from Cognizant and Guidewire and two newspaper articles, summarized with links to the original sources and archival PDF copies of the two articles."
+description: "News releases and articles quoting or reporting on Steve Naish, from Cognizant, Guidewire, the Marietta Daily Journal, and The Business Journal of Milwaukee."
 breadcrumb:
   - title: In the News
 ---
