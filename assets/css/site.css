@@ -53,11 +53,12 @@
   --rule: #D9DDE3;         /* decorative dividers only */
   --pale: #D6DEE8;         /* secondary text on navy */
 
-  /* Involvement legend (used on the Technology page) */
-  --legend-dark: #1F3A5F;
-  --legend-medium: #3E6A9A;
-  --legend-light: #DCE6F2;
-  --legend-light-outline: #9FB3CB;
+  /* Involvement legend (used on the Technology page). Three looks that differ in lightness
+     and in fill, not in hue, so they stay distinct for color-blind readers:
+     navy fill with white text, pale blue fill with dark text, white with a thin outline. */
+  --legend-dark: #1F3A5F;          /* navy; white text 11.7:1 */
+  --legend-medium: #BCD3EE;        /* pale blue; dark text 10.2:1 */
+  --legend-light-outline: #4A5563; /* thin outline on white; 7.6:1 against white */
 
   --font-display: "Newsreader", Georgia, serif;
   --font-body: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
@@ -470,24 +471,29 @@ summary:focus-visible,
 /* ---------- Technology page ---------- */
 .band--flush-top { padding-top: 0; }
 .band--tight-bottom { padding-bottom: var(--space-5); }
-.card-grid--spaced { margin-top: var(--space-5); }
 .box__title--lg { font-size: 26px; }
 
+/* Legend markers: the shape is a second cue next to the color.
+   solid square = customer or delivery leader; half-filled square = selected, solutioned,
+   integrated or delivered alongside; empty outlined square = evaluated in a selection. */
 .swatch {
   display: inline-block;
   flex: 0 0 auto;
+  box-sizing: border-box;
   width: 16px;
   height: 16px;
   margin-right: var(--space-2);
   vertical-align: -2px;
-  border-radius: 3px;
+  border: 2px solid var(--legend-dark);
+  border-radius: 2px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 }
 .swatch--dark { background: var(--legend-dark); }
-.swatch--medium { background: var(--legend-medium); }
-.swatch--light { background: var(--legend-light); box-shadow: inset 0 0 0 1px var(--legend-light-outline); }
+.swatch--medium { background: linear-gradient(90deg, var(--legend-dark) 50%, var(--legend-medium) 50%); }
+.swatch--light { background: var(--white); }
 
 .involvement-lines p { margin-bottom: var(--space-3); font-size: 16px; line-height: 1.5; color: var(--slate); }
-.involvement-tag { display: flex; align-items: center; font-weight: 500; color: var(--slate); }
 
 .legend { display: flex; flex-direction: column; gap: var(--space-3); margin: 0 0 var(--space-4); padding: 0; list-style: none; }
 .legend li { display: flex; align-items: center; font-weight: 500; }
@@ -497,10 +503,33 @@ summary:focus-visible,
 .involvement-group + .involvement-group { margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--rule); }
 .involvement-label { display: flex; align-items: center; margin: 0 0 var(--space-2); font-size: 14px; font-weight: 600; color: var(--slate); }
 .chips { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
-.chips li { padding: 4px 12px; font-size: 14px; line-height: 1.5; border-radius: 3px; }
-.chips--dark li { color: var(--white); background: var(--legend-dark); }
-.chips--medium li { color: var(--white); background: var(--legend-medium); }
-.chips--light li { color: var(--ink); background: var(--legend-light); }
+/* Platform chips: same three looks as the legend, each with the matching small shape marker. */
+.chips li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 11px;
+  font-size: 14px;
+  line-height: 1.5;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.chips li::before {
+  content: "";
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  width: 9px;
+  height: 9px;
+  border: 1.5px solid transparent;
+}
+.chips--dark li { color: var(--white); background: var(--legend-dark); border-color: var(--legend-dark); }
+.chips--dark li::before { background: var(--white); border-color: var(--white); }
+.chips--medium li { color: var(--ink); background: var(--legend-medium); border-color: var(--legend-medium); }
+.chips--medium li::before { background: linear-gradient(90deg, var(--legend-dark) 50%, transparent 50%); border-color: var(--legend-dark); }
+.chips--light li { color: var(--ink); background: var(--white); border-color: var(--legend-light-outline); }
+.chips--light li::before { background: transparent; border-color: var(--legend-dark); }
 
 /* ---------- Accelerators page ---------- */
 .box--cta { align-self: end; }
@@ -911,6 +940,21 @@ summary:focus-visible,
   body { background: #fff; color: #000; }
   /* Plain black on white: no background bands, no shadows. */
   *, *::before, *::after { background: transparent !important; box-shadow: none !important; text-shadow: none !important; color: #000 !important; }
+
+  /* Involvement markers and platform chips keep their look in print: navy with white text,
+     pale blue with dark text, white with an outline, and the three marker shapes. The shapes
+     and the outline mean the three kinds stay apart even on a black and white printer. */
+  .swatch, .chips li, .chips li::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .swatch { border: 2px solid var(--legend-dark) !important; }
+  .swatch--dark { background: var(--legend-dark) !important; }
+  .swatch--medium { background: linear-gradient(90deg, var(--legend-dark) 50%, var(--legend-medium) 50%) !important; }
+  .swatch--light { background: var(--white) !important; }
+  .chips--dark li { color: var(--white) !important; background: var(--legend-dark) !important; border-color: var(--legend-dark) !important; }
+  .chips--dark li::before { background: var(--white) !important; border-color: var(--white) !important; }
+  .chips--medium li { color: var(--ink) !important; background: var(--legend-medium) !important; border-color: var(--legend-medium) !important; }
+  .chips--medium li::before { background: linear-gradient(90deg, var(--legend-dark) 50%, transparent 50%) !important; border-color: var(--legend-dark) !important; }
+  .chips--light li { color: var(--ink) !important; background: var(--white) !important; border-color: var(--legend-light-outline) !important; }
+  .chips--light li::before { background: transparent !important; border-color: var(--legend-dark) !important; }
 
   /* Removed in print: navigation, menu button, print button, footer navigation, buttons. */
   .skip-link, .site-header, .breadcrumb, .footer-nav, .print-button, .btn, .btn-row,
