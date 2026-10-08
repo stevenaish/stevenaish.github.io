@@ -1,5 +1,5 @@
 # Preview-only settings. Used only with the local preview:
-#   bundle exec jekyll serve --config _config.yml,_config.preview.yml --destination D:\Projects\stevenaish-preview-output
+#   bundle exec jekyll serve --config _config.yml,_config.preview.yml --destination <a folder outside the repository>
 # GitHub Pages never reads this file (it reads _config.yml only), and the underscore keeps
 # it out of the published site. It contains only Cloudflare's published TEST values.
 # The real site key works only on stevenaish.com, so the preview swaps in the test key

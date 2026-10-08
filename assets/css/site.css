@@ -1,8 +1,8 @@
-/* stevenaish.com design system (Build Handoff Part D)
+/* stevenaish.com design system
    Mobile first: base rules are for the smallest screens; wider layouts are added
    with min-width media queries (tablet at 768 px, desktop at 900 px). */
 
-/* ---------- Fonts: self-hosted, no requests to Google (D1) ---------- */
+/* ---------- Fonts: self-hosted, no requests to Google ---------- */
 @font-face {
   font-family: "Newsreader";
   font-style: normal;
@@ -39,7 +39,7 @@
   src: url("../fonts/ibm-plex-sans-latin-600-normal.woff2") format("woff2");
 }
 
-/* ---------- Color and spacing tokens (D2, D3) ---------- */
+/* ---------- Color and spacing tokens ---------- */
 :root {
   --ink: #1B2430;          /* text */
   --slate: #4A5563;        /* secondary text */
@@ -75,7 +75,7 @@
   --space-8: 64px;
   --space-9: 96px;
 
-  --gutter: 20px;          /* phone gutters (D3) */
+  --gutter: 20px;          /* phone gutters */
   --content-width: 1200px; /* content width; gives 120 px side margins at 1440 px */
 }
 
@@ -142,7 +142,7 @@ main:focus { outline: none; }
   }
 }
 
-/* ---------- Type scale (D1) ---------- */
+/* ---------- Type scale ---------- */
 h1, h2, h3 {
   margin: 0 0 var(--space-4);
   font-family: var(--font-display);
@@ -195,7 +195,7 @@ h3 { font-size: 25px; line-height: 1.25; }
   .lede { font-size: 20px; }
 }
 
-/* ---------- Focus (D3): 3 px outline offset 3 px; white on navy bands ---------- */
+/* ---------- Focus: 3 px outline offset 3 px; white on navy bands ---------- */
 a:focus-visible,
 button:focus-visible,
 summary:focus-visible,
@@ -237,7 +237,7 @@ summary:focus-visible,
   .band { padding: var(--space-9) 0; }
 }
 
-/* ---------- Buttons and links (44 px minimum target, D3) ---------- */
+/* ---------- Buttons and links (44 px minimum target) ---------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -321,7 +321,7 @@ summary:focus-visible,
   .hero__portrait { max-width: 480px; justify-self: end; }
 }
 
-/* ---------- Cards (D3) ---------- */
+/* ---------- Cards ---------- */
 .card-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -690,7 +690,7 @@ summary:focus-visible,
 .x-note { margin: var(--space-3) 0 0; max-width: 30em; }
 .connect .x-note { margin-bottom: 0; }
 
-/* ---------- Contact form on Connect (Build Handoff Part L) ---------- */
+/* ---------- Contact form on Connect ---------- */
 .contact__layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-6); }
 .contact__intro p { max-width: 32em; color: var(--slate); }
 .contact__panel {
@@ -909,7 +909,7 @@ summary:focus-visible,
 .footer-nav a:hover { color: var(--link-hover); text-decoration: underline; }
 .footer-line, .footer-copyright, .footer-updated { margin: 0; }
 
-/* ---------- Print and save-to-PDF (Build Handoff D5) ---------- */
+/* ---------- Print and save-to-PDF ---------- */
 /* Print-only elements stay hidden on screen. */
 .print-provenance, .print-source-line { display: none; }
 

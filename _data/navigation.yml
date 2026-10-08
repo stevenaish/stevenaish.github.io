@@ -1,4 +1,4 @@
-# Site navigation (Build Handoff Part C: global and footer navigation).
+# Site navigation: the global and footer navigation.
 # Sub-pages under "children" appear only in the mobile menu (approved mobile menu design).
 main:
   - title: Experience

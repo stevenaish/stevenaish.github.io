@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ page.title | escape }}</title>
 {%- comment -%}
-  Descriptions, canonical address, Open Graph, and X cards (Build Handoff F2).
+  Descriptions, canonical address, Open Graph, and X cards.
   The 404 page is left out on purpose: it has no address of its own to promote.
 {%- endcomment %}
 {%- assign page_description = page.description %}
@@ -33,7 +33,7 @@
 <meta name="twitter:description" content="{{ page_description | escape }}">
 {%- endif %}
 <meta name="twitter:image" content="{{ share_image }}">
-{%- comment %} Repeating print footer (D5): this page's address, via page-margin boxes where the browser supports them. {% endcomment %}
+{%- comment %} Repeating print footer: this page's address, via page-margin boxes where the browser supports them. {% endcomment %}
 <style media="print">@page { @bottom-left { content: "Source: {{ canonical }}"; } @bottom-right { content: "Page " counter(page) " of " counter(pages); } }</style>
 {% include site-jsonld.html %}
 {%- endunless %}

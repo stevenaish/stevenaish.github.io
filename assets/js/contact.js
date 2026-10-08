@@ -1,4 +1,4 @@
-// Connect page: the "Send a message" form (Build Handoff Part L).
+// Connect page: the "Send a message" form.
 // Checks the fields in the browser, sends them to the contact Worker, and shows the
 // approved success or error message. If the Worker cannot be reached, the error message
 // appears and the rest of the page keeps working.
