@@ -56,7 +56,7 @@
   /* Involvement legend (used on the Technology page). Three looks that differ in lightness
      and in fill, not in hue, so they stay distinct for color-blind readers:
      navy fill with white text, pale blue fill with dark text, white with a thin outline. */
-  --legend-dark: #1F3A5F;          /* navy; white text 11.7:1 */
+  --legend-dark: #1F3A5F;          /* navy; white text 11.5:1 */
   --legend-medium: #BCD3EE;        /* pale blue; dark text 10.2:1 */
   --legend-light-outline: #4A5563; /* thin outline on white; 7.6:1 against white */
 
