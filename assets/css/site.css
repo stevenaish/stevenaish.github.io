@@ -678,6 +678,9 @@ button:focus-visible,
 .connect h2 { margin-bottom: var(--space-3); }
 .connect p { margin-bottom: 0; }
 .connect .btn-row { margin-top: 0; }
+/* Note beneath the X button: the account is private (Home band and Connect page). */
+.x-note { margin: var(--space-3) 0 0; max-width: 30em; }
+.connect .x-note { margin-bottom: 0; }
 .connect--light h2 { color: var(--navy); }
 .connect--light p { color: var(--slate); }
 @media (min-width: 900px) {

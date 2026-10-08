@@ -115,9 +115,12 @@ schema: home
       <h2 id="home-connect">Connect</h2>
       <p>LinkedIn is the best way to reach me professionally.</p>
     </div>
-    <div class="btn-row">
-      <a class="btn btn--primary link-external" href="https://www.linkedin.com/in/stevenaish/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
-      <a class="btn btn--secondary link-external" href="https://x.com/stevenaish" target="_blank" rel="noopener noreferrer">X profile<span class="visually-hidden"> (opens in a new tab)</span></a>
+    <div class="connect__actions">
+      <div class="btn-row">
+        <a class="btn btn--primary link-external" href="https://www.linkedin.com/in/stevenaish/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a class="btn btn--secondary link-external" href="https://x.com/stevenaish" target="_blank" rel="noopener noreferrer">X profile<span class="visually-hidden"> (opens in a new tab)</span></a>
+      </div>
+      <p class="text-secondary x-note">My X account is private. Send a follow request and I will review it.</p>
     </div>
   </div>
 </section>

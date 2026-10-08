@@ -22,6 +22,7 @@ breadcrumb:
         <h2 class="card__title">X</h2>
         <p class="text-secondary">@stevenaish</p>
         <a class="btn btn--secondary link-external" href="https://x.com/stevenaish" target="_blank" rel="noopener noreferrer">X profile<span class="visually-hidden"> (opens in a new tab)</span></a>
+        <p class="text-secondary x-note">My X account is private. Send a follow request and I will review it.</p>
       </div>
     </div>
   </div>

@@ -53,6 +53,7 @@
       "url": {{ page_url | jsonify }},
       "name": {{ page.title | jsonify }},
       "description": {{ page.description | jsonify }},
+      "dateModified": {{ site.content_updated | jsonify }},
       "mainEntity": { "@id": {{ person_id | jsonify }} }
     },
     {

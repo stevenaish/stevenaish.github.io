@@ -132,8 +132,11 @@ content:
 # Footer
 footer_show_references: true
 
-# Footer date: the launch month and year (build list item 18 sets this)
-content_updated: "[launch month, to be set in item 18]"
+# The one "Content updated" setting, as year-month (YYYY-MM). Build list item 18
+# sets the launch month here. It drives the visible "Content updated" text in the
+# footer, on Career History, and in print, and the dateModified value in the
+# structured data, so they always match.
+content_updated: "2026-10"
 
 # Build settings (no theme: the site has its own layouts and stylesheet)
 theme: null
