@@ -11,6 +11,16 @@ twitter:
   card: summary_large_image
   username: stevenaish
 
+# Contact form (Build Handoff Part L). The form, its text, and the "Send a message"
+# buttons appear only when "enabled" is true. This stays false until the Worker is live.
+# The Turnstile site key is public; the real one goes here at launch. The secret key
+# is never in this repository. The local preview turns the form on with Cloudflare's
+# published test key through _config.preview.yml.
+contact:
+  enabled: false
+  endpoint: /api/contact
+  turnstile_sitekey: ""
+
 # The one "Content updated" setting, as year-month (YYYY-MM). Build list item 18
 # sets the launch month here. It drives the visible "Content updated" text in the
 # footer, on Career History, and in print, and the dateModified value in the

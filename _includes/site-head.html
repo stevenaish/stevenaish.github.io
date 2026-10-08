@@ -5,8 +5,10 @@
   Descriptions, canonical address, Open Graph, and X cards (Build Handoff F2).
   The 404 page is left out on purpose: it has no address of its own to promote.
 {%- endcomment %}
-{%- if page.description %}
-<meta name="description" content="{{ page.description | escape }}">
+{%- assign page_description = page.description %}
+{%- if site.contact.enabled and page.description_with_form %}{% assign page_description = page.description_with_form %}{% endif %}
+{%- if page_description %}
+<meta name="description" content="{{ page_description | escape }}">
 {%- endif %}
 {%- unless page.url == '/404.html' %}
 {%- assign canonical = site.canonical_host | append: page.url %}
@@ -15,8 +17,8 @@
 <meta property="og:site_name" content="Steve Naish">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ page.title | escape }}">
-{%- if page.description %}
-<meta property="og:description" content="{{ page.description | escape }}">
+{%- if page_description %}
+<meta property="og:description" content="{{ page_description | escape }}">
 {%- endif %}
 <meta property="og:url" content="{{ canonical }}">
 <meta property="og:image" content="{{ share_image }}">
@@ -27,8 +29,8 @@
 <meta name="twitter:card" content="{{ site.twitter.card }}">
 <meta name="twitter:site" content="@{{ site.twitter.username }}">
 <meta name="twitter:title" content="{{ page.title | escape }}">
-{%- if page.description %}
-<meta name="twitter:description" content="{{ page.description | escape }}">
+{%- if page_description %}
+<meta name="twitter:description" content="{{ page_description | escape }}">
 {%- endif %}
 <meta name="twitter:image" content="{{ share_image }}">
 {%- comment %} Repeating print footer (D5): this page's address, via page-margin boxes where the browser supports them. {% endcomment %}

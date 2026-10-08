@@ -681,6 +681,59 @@ button:focus-visible,
 /* Note beneath the X button: the account is private (Home band and Connect page). */
 .x-note { margin: var(--space-3) 0 0; max-width: 30em; }
 .connect .x-note { margin-bottom: 0; }
+
+/* ---------- Contact form on Connect (Build Handoff Part L) ---------- */
+.contact__layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-6); }
+.contact__intro p { max-width: 32em; color: var(--slate); }
+.contact__panel {
+  padding: var(--space-5);
+  background: var(--ivory);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+}
+@media (min-width: 600px) { .contact__panel { padding: var(--space-6); } }
+@media (min-width: 900px) {
+  .contact__layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: var(--space-8); align-items: start; }
+}
+/* The form needs scripts (the spam check does too), so it shows only when scripts run. */
+.contact-form { display: none; }
+.js .contact-form { display: block; }
+.contact__noscript { margin: 0; }
+.field { margin-bottom: var(--space-5); }
+.field label { display: block; margin-bottom: var(--space-2); font-weight: 600; color: var(--ink); }
+.field__note { font-weight: 400; color: var(--slate); }
+.field input, .field textarea {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px var(--space-3);
+  font: inherit;
+  font-size: 16px;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--slate);
+  border-radius: 4px;
+}
+.field textarea { min-height: 160px; resize: vertical; line-height: 1.5; }
+.field input:focus-visible, .field textarea:focus-visible { outline: 3px solid var(--navy); outline-offset: 2px; }
+.field input[aria-invalid="true"], .field textarea[aria-invalid="true"] { border: 2px solid #8A1F11; }
+.field__hint { margin: 0 0 var(--space-2); font-size: 15px; color: var(--slate); }
+.field__error { margin: var(--space-2) 0 0; font-size: 15px; font-weight: 500; color: #8A1F11; }
+.field__error[hidden] { display: none; }
+.hp { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+.contact-form__check { margin-bottom: var(--space-5); min-height: 65px; }
+.contact-form__submit[disabled] { opacity: 0.7; cursor: progress; }
+.contact-status:empty { display: none; }
+.contact-message {
+  margin: var(--space-4) 0 0;
+  padding: var(--space-3) var(--space-4);
+  font-weight: 500;
+  background: var(--white);
+  border-left: 4px solid var(--navy);
+}
+.contact-message--success { border-left-color: #1B6B3A; }
+.contact-message--error { border-left-color: #8A1F11; }
+.contact-form__notice { margin: var(--space-4) 0 0; }
 .connect--light h2 { color: var(--navy); }
 .connect--light p { color: var(--slate); }
 @media (min-width: 900px) {
@@ -860,7 +913,7 @@ button:focus-visible,
 
   /* Removed in print: navigation, menu button, print button, footer navigation, buttons. */
   .skip-link, .site-header, .breadcrumb, .footer-nav, .print-button, .btn, .btn-row,
-  .connect__actions, .toc, .career__aside, .provenance { display: none !important; }
+  .connect__actions, .toc, .career__aside, .provenance, .contact { display: none !important; }
 
   /* Provenance at the top of page 1, in normal flow, and a static source line at the end. */
   .print-provenance { display: block; margin: 0 0 14pt; padding-bottom: 8pt; border-bottom: 1px solid #000; }

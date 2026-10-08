@@ -113,11 +113,14 @@ schema: home
   <div class="container connect">
     <div>
       <h2 id="home-connect">Connect</h2>
-      <p>LinkedIn is the best way to reach me professionally.</p>
+      <p>LinkedIn is the best way to reach me professionally.{% if site.contact.enabled %} You may also send a message through this site.{% endif %}</p>
     </div>
     <div class="connect__actions">
       <div class="btn-row">
         <a class="btn btn--primary link-external" href="https://www.linkedin.com/in/stevenaish/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+        {%- if site.contact.enabled %}
+        <a class="btn btn--secondary" href="/connect/#message">Send a message</a>
+        {%- endif %}
         <a class="btn btn--secondary link-external" href="https://x.com/stevenaish" target="_blank" rel="noopener noreferrer">X profile<span class="visually-hidden"> (opens in a new tab)</span></a>
       </div>
       <p class="text-secondary x-note">Please send me a follow request.</p>
