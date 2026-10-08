@@ -166,6 +166,10 @@ h3 { font-size: 25px; line-height: 1.25; }
 .lede { font-size: 18px; max-width: 60ch; }
 
 .text-secondary { font-size: 15px; line-height: 1.5; color: var(--slate); }
+/* Standalone link lines ("Related: ...", "... in Career History") and news headline links get a
+   44 px tall touch target from vertical padding on the inline link. Padding on an inline element
+   never moves the page, so the layout is unchanged. Links inside sentences are not touched. */
+.text-secondary > a:only-child, .cov-item__headline > a { padding-block: 13px; }
 
 /* Small labels: 12 to 13 px, uppercase, bronze */
 .label {
@@ -895,7 +899,9 @@ summary:focus-visible,
   list-style: none;
 }
 .breadcrumb li + li::before { content: "/"; padding: 0 var(--space-2); color: var(--slate); }
-.breadcrumb a { display: inline-flex; align-items: center; min-height: 24px; }
+/* Touch target: 44 px tall and wider than 24 px, made with padding that an equal negative
+   margin cancels, so the breadcrumb looks exactly as before. */
+.breadcrumb a { display: inline-flex; align-items: center; min-height: 44px; margin: -10px -6px; padding: 0 6px; }
 
 /* ---------- Footer ---------- */
 .site-footer {
@@ -918,6 +924,10 @@ summary:focus-visible,
   display: inline-flex;
   align-items: center;
   min-height: 44px;
+  /* Side padding cancelled by an equal negative margin: short links such as "X" get a target
+     wider than 24 px while the footer looks exactly as before. */
+  margin: 0 -8px;
+  padding: 0 8px;
   font-weight: 500;
   color: var(--ink);
   text-decoration: none;
