@@ -1,138 +1,52 @@
 # Site
-favicon: images/favicon.ico
 url: https://stevenaish.com
 
-# Content configuration version
-version: 2
+# Address used for canonical links, Open Graph tags, and structured data.
+# Kept separate from "url" because "jekyll serve" replaces "url" with the
+# local preview address, and these tags must always name the real site.
+canonical_host: https://stevenaish.com
 
-# Personal info
-name: Steve Naish
-title: People-Centered Leadership in Insurance Technology Transformation
-website: www.stevenaish.com
-location: Atlanta, Roswell, Georgia
-description: Steve Naish is an Atlanta based insurance technology executive with more than 30 years of experience in core system modernization, Guidewire cloud transformation, and generative and agentic AI in insurance.
-image: /images/profile.webp
-
-# Dark Mode (true/false/never)
-darkmode: false
-
-# Social links
-linkedin_username: stevenaish
-
+# X card settings used in the page head.
 twitter:
   card: summary_large_image
   username: stevenaish
 
-# Additional icon links
-additional_links:
+# Contact form. The form, its text, and the "Send a message"
+# buttons appear only when "enabled" is true. The Worker is deployed on the route
+# /api/contact. The Turnstile site key below is public by design. The secret key and
+# the destination address are Worker secrets and are never in this repository.
+# The local preview uses Cloudflare's published test key and a local test Worker
+# through _config.preview.yml instead.
+contact:
+  enabled: true
+  endpoint: /api/contact
+  turnstile_sitekey: "0x4AAAAAAFQ6AqI2SogvnN2j"
 
-# About Section
-about_profile_image: images/profile.webp
-about_content: | # this will include new lines to allow paragraphs
+# The one "Content updated" setting, as year-month (YYYY-MM). The launch step
+# sets the launch month here. It drives the visible "Content updated" text in the
+# footer, on Career History, and in print, and the dateModified value in the
+# structured data, so they always match.
+content_updated: "2026-10"
 
-  Steve Naish is a business-focused technology executive who translates business strategy into technology outcomes, and technology capability into business results. He pairs a builder's mindset, honed co-founding two insurance technology startups acquired by public companies, with a proven ability to deliver through the large, complex, matrixed organizations of global insurers and consultancies. With more than 30 years of experience helping leading insurers drive profitable growth through technology, his work centers on modernizing core systems while supporting the teams responsible for delivering and sustaining those platforms.
+# Build settings (no theme: the site has its own layouts and stylesheet)
+theme: null
 
-  As Guidewire Ecosystem Services Leader at Cognizant since 2019, Naish guides insurers through cloud-based core system modernization across policy, claims, billing, data, and digital. He works closely with delivery teams and clients to ensure that transformation efforts are practical, well-governed, and aligned with user needs.
+# Files that stay in the repository only and are not published on the site.
+# CNAME is listed because GitHub Pages excludes it by default, and that default
+# is dropped as soon as this list exists. The CNAME file itself is not changed.
+exclude:
+  - CNAME
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
 
-  Known for his steady and thoughtful leadership style, Naish supports organizations through periods of change by prioritizing communication, shared understanding, and execution discipline.
-
-content:
-  - title: Experience
-    layout: list
-    content:
-      - layout: left
-        title: Cognizant
-        sub_title: Guidewire Ecosystem Services Leader
-        caption: 2019 to present
-        quote: >
-          Leading Guidewire cloud modernization for insurers across policy, claims, billing, data, and digital.
-        description: | # this will include new lines to allow paragraphs
-          Guides insurers through cloud-based core system modernization, partnering with carriers and delivery teams to keep transformation practical, well-governed, and aligned with business outcomes.
-
-          - Led teams that published ten accelerators on the [Guidewire Marketplace](https://marketplace.guidewire.com/global-search/%40uri#tab=Extensions&sortCriteria=%40sfparentmp_app_released_date__c%20descending&f-sfparentmp_partner_display_name_formula__c=Cognizant){:target="_blank" rel="noopener"} in 2026, including product models spanning non-owned auto, excess auto, contingent lessor, aviation, earthquake, sports, and professional liability for architects, engineers, and technology consultants across the United States, Canada, and EMEA, built on Guidewire PolicyCenter Cloud and Advanced Product Designer.
-          - Most recently released the GWCP Intelligent Deployment Orchestrator Integration Gateway App, automating deployment readiness checks, build validation, mandatory database backups, and scheduled or on-demand deployments across PolicyCenter, ClaimCenter, BillingCenter, and ContactManager, alongside the Cloud Data Access Ingestion Framework for downstream data delivery.
-          - Guided large-scale ClaimCenter and PolicyCenter cloud implementations delivered on time and under budget through collaboration, trust, and effective governance.
-          - Cognizant was recognized as a Leader in [Avasant's inaugural Guidewire Services 2026 RadarView](https://avasant.com/report/guidewire-services-2026-radarview/){:target="_blank" rel="noopener"}, a global assessment of 24 service providers published in August 2026, earning top ratings in both of Avasant's assessment dimensions, practice maturity and future-proofing.
-          - Served as Cognizant's Guidewire practice spokesperson when [Everest Group named Cognizant a Leader in its Guidewire Services PEAK Matrix Assessment](https://news.cognizant.com/2023-01-19-Everest-Group-Names-Cognizant-a-Leader-for-Guidewire-Services){:target="_blank" rel="noopener"}, with Cognizant ranked number one for Vision and Capability.
-          - Focused on applying generative and agentic AI to reimagine insurance operations, and participated in Cognizant's [Guinness World Record setting online generative AI hackathon](https://news.cognizant.com/2025-08-21-Cognizants-Vibe-Coding-Event-Sets-GUINNESS-WORLD-RECORDS-TM-Title){:target="_blank" rel="noopener"}, in which more than 53,000 associates across 40 plus countries submitted over 30,000 prototypes and ideas.
-                    <a href="https://avasant.com/report/guidewire-services-2026-radarview/" target="_blank" rel="noopener">
-          <img src="/images/avasant-guidewire-services-2026-radarview-cognizant-leader.png" alt="Avasant Guidewire Services 2026 RadarView showing Cognizant recognized as a Leader for Guidewire services practice maturity and future-proofing" style="max-width:100%; width:480px; height:auto; display:block; margin:1.5rem auto;">
-          </a>
-
-          *Source: [Avasant Guidewire Services 2026 RadarView](https://avasant.com/report/guidewire-services-2026-radarview/){:target="_blank" rel="noopener"}, August 2026.*
-      - layout: left
-        title: WGroup
-        sub_title: Principal Consultant
-        caption: 2018 to 2019
-        description: | # this will include new lines to allow paragraphs
-          Provided strategic technology advisory services focused on financial services clients and merger and acquisition engagements.
-
-      - layout: left
-        title: Fifth Third Bank
-        sub_title: CIO of Insurance and Vice President
-        caption: 2016 to 2018
-        description: | # this will include new lines to allow paragraphs
-          Owned architecture, strategy, and run technology for the Insurance Services division, building and directing internal and external teams.
-
-          - Led technology due diligence and integration project management for merger and acquisition activity that doubled division revenue in twelve months.
-          - Created the divisional digital strategy and led evaluation and selection of fintech partners.
-          - Implemented information security protocols across the new division and acquired companies.
-
-      - layout: left
-        title: XL Catlin
-        sub_title: SVP, Technology and Information Delivery
-        caption: 2011 to 2016
-        quote: >
-          Technology delivery leadership for an industry recognized Guidewire InsuranceSuite transformation.
-        description: | # this will include new lines to allow paragraphs
-          Managed the technology solutions workstreams for delivery of an industry recognized business transformation program built on Guidewire InsuranceSuite policy, claims, and billing modules, with a program budget of more than 80 million dollars.
-
-          - Directed technical delivery across architecture, development, configuration, integration, data warehouse, infrastructure, quality assurance, and release management.
-          - Delivered a custom Operational Data Store providing information delivery from all three Guidewire modules, in production in under seven months and recognized as an industry first.
-
-      - layout: left
-        title: Munich Re (Munich American Reassurance Company)
-        sub_title: Vice President, Information Technology Services
-        caption: 2009 to 2011
-        description: | # this will include new lines to allow paragraphs
-          Directed enterprise projects, application development, application support, testing, the project management office, infrastructure, and IT operations for the U.S. life reinsurance business.
-
-          - Received a "Most Innovative CRM Project in Insurance" group award for an on time, on budget CRM and workflow implementation.
-          - Led datacenter improvements that contributed to North American datacenter consolidation.
-
-      - layout: left
-        title: Earlier Career
-        sub_title: Technology Leadership and Entrepreneurship
-        description: | # this will include new lines to allow paragraphs
-          Earlier roles combined large carrier technology leadership with founding and scaling insurance technology companies.
-
-          - Technology leadership at AIG, where he launched the SMART Insurance Administration Platform on time and under budget.
-          - Co-founded and led technology teams for two fast growing insurance start-ups, both acquired by publicly traded companies.
-          - At MyBenefitSource, designed and implemented the web-based SingleSource technology solution that differentiated the company, helping it raise more than 40 million dollars in capital before its acquisition by H&R Block.
-
-  - title: Education
-    layout: list
-    content:
-      - layout: left
-        title: Miami University
-        sub_title: Bachelor of Science, Finance Major, MIS Minor
-
-  - title: Beyond the Office
-    layout: text
-    content: | # this will include new lines to allow paragraphs
-      Career accomplishments only tell part of the story. Steve is a loving and devoted father whose faith and family come first. He is an active member of his church community in the Roswell and Alpharetta area, where he supports mentoring and career transition ministry work, an extension of the mentoring he has done throughout his career.
-
-      Outside of work you will find him on the water boating, outdoors enjoying nature, or at an early morning workout. He believes the discipline that carries you across a marathon finish line is the same discipline that delivers a complex program on time, and that personal character and consistency matter just as much as professional success.
-
-# Footer
-footer_show_references: true
-
-# Build settings
-remote_theme: sproogen/resume-theme
-
-sass:
-  sass_dir: _sass
-  style: compressed
+# Keep the old forwarding file out of the sitemap. This only sets a flag for
+# the sitemap plugin; the file itself is not edited, wrapped, or processed.
+defaults:
+  - scope:
+      path: "marketplace/index.html"
+    values:
+      sitemap: false
 
 plugins:
  - jekyll-seo-tag

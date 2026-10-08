@@ -1,0 +1,12 @@
+# Preview-only settings. Used only with the local preview:
+#   bundle exec jekyll serve --config _config.yml,_config.preview.yml --destination <a folder outside the repository>
+# GitHub Pages never reads this file (it reads _config.yml only), and the underscore keeps
+# it out of the published site. It contains only Cloudflare's published TEST values.
+# The real site key works only on stevenaish.com, so the preview swaps in the test key
+# and a local test Worker (start it with: wr dev -c wrangler.test.toml --local --port 8787).
+contact:
+  enabled: true
+  # The local test Worker (wrangler dev on this desktop).
+  endpoint: http://127.0.0.1:8787/api/contact
+  # Cloudflare's published always-passes test site key. Works on any local address.
+  turnstile_sitekey: "1x00000000000000000000AA"

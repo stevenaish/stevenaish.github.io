@@ -1,0 +1,21 @@
+{%- comment -%}
+  Breadcrumbs: set `breadcrumb` in a page's front matter as a list of ancestors
+  (title and url) followed by the current page (title only). Home is added here.
+  Pages without `breadcrumb` (the Home page) show nothing.
+{%- endcomment -%}
+{%- if page.breadcrumb -%}
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      {%- for crumb in page.breadcrumb -%}
+      {%- if crumb.url -%}
+      <li><a href="{{ crumb.url | relative_url }}">{{ crumb.title }}</a></li>
+      {%- else -%}
+      <li aria-current="page">{{ crumb.title }}</li>
+      {%- endif -%}
+      {%- endfor -%}
+    </ol>
+  </div>
+</nav>
+{%- endif -%}

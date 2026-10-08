@@ -1,0 +1,43 @@
+# Site navigation: the global and footer navigation.
+# Sub-pages under "children" appear only in the mobile menu (approved mobile menu design).
+main:
+  - title: Experience
+    url: /experience/
+    children:
+      - title: Career History
+        url: /experience/career-history/
+  - title: Impact
+    url: /impact/
+    children:
+      - title: Guidewire Marketplace accelerators
+        url: /impact/guidewire-marketplace-accelerators/
+  - title: In the News
+    url: /in-the-news/
+  - title: Technology
+    url: /technology/
+  - title: About
+    url: /about/
+  - title: Connect
+    url: /connect/
+
+footer:
+  - title: Experience
+    url: /experience/
+  - title: Career History
+    url: /experience/career-history/
+  - title: Impact
+    url: /impact/
+  - title: In the News
+    url: /in-the-news/
+  - title: Technology
+    url: /technology/
+  - title: About
+    url: /about/
+  - title: Connect
+    url: /connect/
+  - title: LinkedIn
+    url: https://www.linkedin.com/in/stevenaish/
+    external: true
+  - title: X
+    url: https://x.com/stevenaish
+    external: true

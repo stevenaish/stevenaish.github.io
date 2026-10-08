@@ -1,0 +1,17 @@
+{%- comment -%}
+  Print and save-to-PDF provenance. Hidden on screen and shown
+  at the top of page 1 when the page is printed or saved to PDF. It is ordinary
+  page content, so it prints in every browser.
+{%- endcomment -%}
+{%- unless page.url == '/404.html' %}
+<div class="print-provenance">
+  <p class="print-provenance__name">Steve Naish</p>
+  <p>Public professional profile | Source: stevenaish.com</p>
+  {%- if page.breadcrumb %}
+  <p>Home{% for crumb in page.breadcrumb %} &gt; {{ crumb.title }}{% endfor %}</p>
+  {%- endif %}
+  <p class="print-provenance__title">{{ page.title | escape }}</p>
+  <p>{{ site.canonical_host }}{{ page.url }}</p>
+  <p>Content updated {% include content-updated.html %}</p>
+</div>
+{%- endunless %}

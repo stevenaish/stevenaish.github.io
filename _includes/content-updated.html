@@ -1,0 +1,2 @@
+{%- comment -%}Month and year of site.content_updated (YYYY-MM), for example "October 2026".{%- endcomment -%}
+{{- site.content_updated | append: '-01' | date: '%B %Y' -}}
