@@ -15,10 +15,24 @@ breadcrumb:
     <h1>Selected platform and technology experience</h1>
     <p class="lede lede--secondary">Experience across Guidewire, its surrounding technology ecosystem, and other insurance platforms, grouped by function and the type of involvement I had with each. A sampling of experience, not a full list.</p>
     <ul class="pill-row" aria-label="On this page">
-      <li><a class="pill" href="#guidewire">Guidewire and its ecosystem</a></li>
       <li><a class="pill" href="#involvement">Types of involvement</a></li>
+      <li><a class="pill" href="#guidewire">Guidewire and its ecosystem</a></li>
       <li><a class="pill" href="#categories">All platforms by category</a></li>
     </ul>
+  </div>
+</section>
+
+<section class="band band--ivory band--flush-top" id="involvement" aria-labelledby="tech-involvement">
+  <div class="container">
+    <div class="box">
+      <h2 id="tech-involvement" class="box__title box__title--lg">Types of involvement</h2>
+      <ul class="legend">
+        <li><span class="swatch swatch--dark" aria-hidden="true"></span>Customer or delivery leader</li>
+        <li><span class="swatch swatch--medium" aria-hidden="true"></span>Selected, solutioned, integrated or delivered alongside</li>
+        <li><span class="swatch swatch--light" aria-hidden="true"></span>Evaluated in a selection</li>
+      </ul>
+      <p class="text-secondary">These describe the type of involvement, not a measure of proficiency or a certification.</p>
+    </div>
   </div>
 </section>
 
@@ -53,20 +67,6 @@ breadcrumb:
         <p>My Guidewire experience includes being a customer at three insurers. Earlier, I took part in AIG's early evaluation of Guidewire ClaimCenter and in Guidewire evaluations within the Munich Re group.</p>
       </li>
     </ul>
-  </div>
-</section>
-
-<section class="band band--ivory band--flush-top" id="involvement" aria-labelledby="tech-involvement">
-  <div class="container">
-    <div class="box">
-      <h2 id="tech-involvement" class="box__title box__title--lg">Types of involvement</h2>
-      <ul class="legend">
-        <li><span class="swatch swatch--dark" aria-hidden="true"></span>Customer or delivery leader</li>
-        <li><span class="swatch swatch--medium" aria-hidden="true"></span>Selected, solutioned, integrated or delivered alongside</li>
-        <li><span class="swatch swatch--light" aria-hidden="true"></span>Evaluated in a selection</li>
-      </ul>
-      <p class="text-secondary">These describe the type of involvement, not a measure of proficiency or a certification.</p>
-    </div>
   </div>
 </section>
 
