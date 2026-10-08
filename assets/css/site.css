@@ -619,8 +619,10 @@ summary:focus-visible,
 .career__main { grid-area: main; }
 .career__head h1 { margin-bottom: var(--space-3); }
 .provenance { margin: 0 0 var(--space-4); font-size: 15px; line-height: 1.5; color: var(--slate); }
-.print-button { gap: var(--space-2); white-space: nowrap; flex-shrink: 0; }
-.print-button[hidden] { display: none; }
+/* The button needs scripts, so it shows only when the page has the "js" marker, which is set in the head
+   before anything is drawn. Showing it with a script after load moved the whole page down. */
+.print-button { display: none; gap: var(--space-2); white-space: nowrap; flex-shrink: 0; }
+.js .print-button { display: inline-flex; }
 
 .toc__details summary {
   display: inline-flex;
