@@ -1000,6 +1000,11 @@ summary:focus-visible,
   li, figure, img, .card, blockquote { break-inside: avoid; }
   .cov-item { break-inside: auto; }
   .cov-item__headline { break-after: avoid; }
+  /* Technology page: the cards may sit on different pages and each card stays whole.
+     Slightly less space above and below the card text lets more cards share a page
+     instead of leaving half a page blank. */
+  #guidewire .card-grid, #categories .card-grid { break-inside: auto; }
+  #guidewire .card, #categories .card { padding-top: 10pt; padding-bottom: 10pt; }
   img { max-width: 100%; }
 
   /* Links stay readable: underlined, with the address after external link text. */
