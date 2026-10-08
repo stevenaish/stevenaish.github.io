@@ -48,7 +48,7 @@ scripts:
         <p>I share executive leadership of Cognizant's global Guidewire practice and lead go-to-market activities and the Guidewire relationship for the United States and Canada, spanning business development and solution shaping across modernization, cloud migration, and managed services.</p>
         <p class="role__lead-in">At Cognizant, my contributions include:</p>
         <ul>
-          <li>Leading the teams that published eleven accelerators to the Guidewire Marketplace. <a href="/impact/guidewire-marketplace-accelerators/">Accelerator details</a></li>
+          <li>Our team has published eleven accelerators to the Guidewire Marketplace. <a href="/impact/guidewire-marketplace-accelerators/">Accelerator details</a></li>
           <li>Serving as Cognizant's Guidewire practice spokesperson when Everest Group named Cognizant a Leader in its Guidewire Services PEAK Matrix Assessment 2023, with Cognizant ranked number one for Vision and Capability.</li>
           <li>Taking part in Cognizant's Guinness World Records generative AI hackathon, in which 53,199 associates across 40 countries submitted 30,601 prototypes and ideas.</li>
         </ul>

@@ -99,7 +99,7 @@ breadcrumb:
       <span class="label">Highlights</span>
       <ul class="ruled-list">
         <li>I share executive leadership of Cognizant's global Guidewire practice and lead go-to-market activities and the Guidewire relationship for the United States and Canada, spanning business development and solution shaping across modernization, cloud migration, and managed services.</li>
-        <li>At Cognizant, I have led teams that published eleven accelerators to the Guidewire Marketplace. <a href="/impact/guidewire-marketplace-accelerators/">See the accelerators</a></li>
+        <li>At Cognizant, our team has published eleven accelerators to the Guidewire Marketplace. <a href="/impact/guidewire-marketplace-accelerators/">See the accelerators</a></li>
         <li>Provided strategic technology advisory services focused on financial services clients and merger and acquisition engagements, including about a year on the integration of two large financial planning firms under private equity ownership.</li>
       </ul>
       <a class="link-more" href="/experience/career-history/#cognizant">Consulting Services Leader roles in Career History</a>

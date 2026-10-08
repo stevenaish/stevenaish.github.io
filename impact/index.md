@@ -20,7 +20,7 @@ breadcrumb:
       <li class="card card--navy">
         <span class="label">Guidewire Marketplace</span>
         <h3>Eleven accelerators, published</h3>
-        <p class="card__lead">At Cognizant, I have led teams that published eleven accelerators to the Guidewire Marketplace: nine insurance product models and two platform and data tools, all listed for Guidewire Cloud Platform.</p>
+        <p class="card__lead">At Cognizant, our team has published eleven accelerators to the Guidewire Marketplace: nine insurance product models and two platform and data tools, all listed for Guidewire Cloud Platform.</p>
         <a class="btn btn--primary" href="/impact/guidewire-marketplace-accelerators/">See the eleven accelerators</a>
       </li>
       <li class="card">

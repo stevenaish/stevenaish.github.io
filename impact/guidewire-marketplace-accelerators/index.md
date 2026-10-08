@@ -1,7 +1,7 @@
 ---
 layout: base
 title: "Guidewire Marketplace Accelerators | Steve Naish"
-description: "Eleven accelerators published to the Guidewire Marketplace by Cognizant teams Steve Naish led: nine insurance product models and two platform and data tools."
+description: "Eleven Cognizant accelerators on the Guidewire Marketplace, published by the team Steve Naish is part of: nine insurance product models and two platform and data tools."
 breadcrumb:
   - title: Impact
     url: /impact/
@@ -11,8 +11,8 @@ breadcrumb:
   <div class="container split split--top">
     <div>
       <h1>Guidewire Marketplace accelerators</h1>
-      <p class="positioning">At Cognizant, I have led teams that published eleven accelerators to the Guidewire Marketplace.</p>
-      <p class="measure">My role included strategy, direction, approach, and the relationship with Guidewire. The teams developed the accelerators. Nine of the eleven are insurance product models for PolicyCenter, provided as Advanced Product Designer mind maps and XML templates that insurers can use to configure a line of business. The other two are platform and data tools. All eleven are listed for Guidewire Cloud Platform.</p>
+      <p class="positioning">At Cognizant, our team has published eleven accelerators to the Guidewire Marketplace.</p>
+      <p class="measure">My role included strategy, direction, approach, and the relationship with Guidewire. The team developed the accelerators. Nine of the eleven are insurance product models for PolicyCenter, provided as Advanced Product Designer mind maps and XML templates that insurers can use to configure a line of business. The other two are platform and data tools. All eleven are listed for Guidewire Cloud Platform.</p>
       <p class="measure">They include Canadian commercial auto product models (Excess Auto, Non-Owned Auto, and Contingent Lessor).</p>
     </div>
     <div class="box box--cta">

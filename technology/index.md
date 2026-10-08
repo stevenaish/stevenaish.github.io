@@ -40,7 +40,7 @@ breadcrumb:
         <h3>Guidewire Cloud and the Cognizant practice</h3>
         <p>I have guided multiple complex, large-scale business transformations and platform organizations using Guidewire products, including PolicyCenter Cloud, BillingCenter Cloud, and ClaimCenter Cloud.</p>
         <p>I share executive leadership of Cognizant's global Guidewire practice and lead go-to-market activities and the Guidewire relationship for the United States and Canada, spanning business development and solution shaping across modernization, cloud migration, and managed services.</p>
-        <p>At Cognizant, I have led teams that published eleven accelerators to the Guidewire Marketplace. <a href="/impact/guidewire-marketplace-accelerators/">Guidewire Marketplace accelerators</a></p>
+        <p>At Cognizant, our team has published eleven accelerators to the Guidewire Marketplace. <a href="/impact/guidewire-marketplace-accelerators/">Guidewire Marketplace accelerators</a></p>
       </li>
       <li class="card">
         <span class="label">Earlier, 2012 onward</span>

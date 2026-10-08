@@ -43,7 +43,7 @@ breadcrumb:
     <div class="about-row">
       <h2 id="about-beyond">Beyond work</h2>
       <div>
-        <p>I am a father of three and volunteer with the Atlanta Community Food Bank. Throughout my career, I have mentored people at work and in my community. Outside work, I enjoy boating, time outdoors, and early-morning workouts. I am a distance runner and have completed the Boston Marathon twice.</p>
+        <p>I am a father of three amazing children and volunteer with the Atlanta Community Food Bank. Throughout my career, I have mentored people at work and in my community. Outside work, I enjoy boating, time outdoors, and early-morning workouts. I am a distance runner and have qualified for and completed the Boston Marathon twice.</p>
       </div>
     </div>
     <div class="about-row" id="education">

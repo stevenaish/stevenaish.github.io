@@ -62,7 +62,7 @@ schema: home
       <div class="card card--feature">
         <span class="label">Selected Impact</span>
         <h3>Guidewire Marketplace accelerators</h3>
-        <p class="card__lead">At Cognizant, I have led teams that published eleven accelerators to the Guidewire Marketplace.</p>
+        <p class="card__lead">At Cognizant, our team has published eleven accelerators to the Guidewire Marketplace.</p>
         <a class="link-more" href="/impact/guidewire-marketplace-accelerators/">See the eleven accelerators</a>
       </div>
       <div class="split__side">
@@ -120,7 +120,7 @@ schema: home
         <a class="btn btn--primary link-external" href="https://www.linkedin.com/in/stevenaish/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
         <a class="btn btn--secondary link-external" href="https://x.com/stevenaish" target="_blank" rel="noopener noreferrer">X profile<span class="visually-hidden"> (opens in a new tab)</span></a>
       </div>
-      <p class="text-secondary x-note">My X account is private. Send a follow request and I will review it.</p>
+      <p class="text-secondary x-note">Please send me a follow request.</p>
     </div>
   </div>
 </section>
