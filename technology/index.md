@@ -26,10 +26,10 @@ breadcrumb:
   <div class="container">
     <div class="box">
       <h2 id="tech-involvement" class="box__title box__title--lg">Types of involvement</h2>
-      <ul class="legend">
-        <li><span class="swatch swatch--dark" aria-hidden="true"></span>Customer or delivery leader</li>
-        <li><span class="swatch swatch--medium" aria-hidden="true"></span>Selected, solutioned, integrated or delivered alongside</li>
-        <li><span class="swatch swatch--light" aria-hidden="true"></span>Evaluated in a selection</li>
+      <ul class="chips legend">
+        <li class="chip--dark">Customer or delivery leader</li>
+        <li class="chip--medium">Selected, solutioned, integrated or delivered alongside</li>
+        <li class="chip--light">Evaluated in a selection</li>
       </ul>
       <p class="text-secondary">These describe the type of involvement, not a measure of proficiency or a certification.</p>
     </div>
@@ -42,8 +42,14 @@ breadcrumb:
     <div class="split split--top">
       <p class="measure">My Guidewire experience spans three vantage points: as a customer at three insurers; at Catlin, where I led the 2012 core-system selection and then led the technology and data workstreams of the subsequent transformation; and as a leader of Cognizant's Guidewire practice.</p>
       <div class="involvement-lines">
-        <p><span class="swatch swatch--dark" aria-hidden="true"></span><strong>Customer or delivery leader:</strong> Guidewire InsuranceSuite, Guidewire InsuranceNow, Guidewire Cloud Platform, Guidewire Marketplace.</p>
-        <p><span class="swatch swatch--medium" aria-hidden="true"></span><strong>Selected, solutioned, integrated or delivered alongside:</strong> Guidewire DataHub and InfoCenter, Guidewire Cloud Data Access.</p>
+        <div class="involvement-group">
+          <p class="involvement-label">Customer or delivery leader</p>
+          <ul class="chips chips--dark"><li>Guidewire InsuranceSuite</li><li>Guidewire InsuranceNow</li><li>Guidewire Cloud Platform</li><li>Guidewire Marketplace</li></ul>
+        </div>
+        <div class="involvement-group">
+          <p class="involvement-label">Selected, solutioned, integrated or delivered alongside</p>
+          <ul class="chips chips--medium"><li>Guidewire DataHub and InfoCenter</li><li>Guidewire Cloud Data Access</li></ul>
+        </div>
       </div>
     </div>
     <ul class="card-grid card-grid--3">
@@ -79,19 +85,19 @@ breadcrumb:
         <h3>{{ category.name }}</h3>
         {%- if category.customer.size > 0 %}
         <div class="involvement-group">
-          <p class="involvement-label"><span class="swatch swatch--dark" aria-hidden="true"></span>Customer or delivery leader</p>
+          <p class="involvement-label">Customer or delivery leader</p>
           <ul class="chips chips--dark">{% for item in category.customer %}<li>{{ item }}</li>{% endfor %}</ul>
         </div>
         {%- endif %}
         {%- if category.selected.size > 0 %}
         <div class="involvement-group">
-          <p class="involvement-label"><span class="swatch swatch--medium" aria-hidden="true"></span>Selected, solutioned, integrated or delivered alongside</p>
+          <p class="involvement-label">Selected, solutioned, integrated or delivered alongside</p>
           <ul class="chips chips--medium">{% for item in category.selected %}<li>{{ item }}</li>{% endfor %}</ul>
         </div>
         {%- endif %}
         {%- if category.evaluated.size > 0 %}
         <div class="involvement-group">
-          <p class="involvement-label"><span class="swatch swatch--light" aria-hidden="true"></span>Evaluated in a selection</p>
+          <p class="involvement-label">Evaluated in a selection</p>
           <ul class="chips chips--light">{% for item in category.evaluated %}<li>{{ item }}</li>{% endfor %}</ul>
         </div>
         {%- endif %}

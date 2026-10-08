@@ -53,12 +53,14 @@
   --rule: #D9DDE3;         /* decorative dividers only */
   --pale: #D6DEE8;         /* secondary text on navy */
 
-  /* Involvement legend (used on the Technology page). Three looks that differ in lightness
-     and in fill, not in hue, so they stay distinct for color-blind readers:
-     navy fill with white text, pale blue fill with dark text, white with a thin outline. */
+  /* Involvement chips (used on the Technology page). Three looks that differ in lightness,
+     fill and border style, not in hue, so they stay distinct for color-blind readers and on
+     paper: navy fill with white text, pale blue fill with a solid mid-blue border, white
+     with a dashed gray border. */
   --legend-dark: #1F3A5F;          /* navy; white text 11.5:1 */
   --legend-medium: #BCD3EE;        /* pale blue; dark text 10.2:1 */
-  --legend-light-outline: #4A5563; /* thin outline on white; 7.6:1 against white */
+  --legend-medium-border: #3F6FA8; /* solid mid-blue border; 5.2:1 against white */
+  --legend-light-outline: #4A5563; /* dashed gray border on white; 7.6:1 against white */
 
   --font-display: "Newsreader", Georgia, serif;
   --font-body: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
@@ -477,65 +479,33 @@ summary:focus-visible,
 .band--tight-bottom { padding-bottom: var(--space-5); }
 .box__title--lg { font-size: 26px; }
 
-/* Legend markers: the shape is a second cue next to the color.
-   solid square = customer or delivery leader; half-filled square = selected, solutioned,
-   integrated or delivered alongside; empty outlined square = evaluated in a selection. */
-.swatch {
-  display: inline-block;
-  flex: 0 0 auto;
-  box-sizing: border-box;
-  width: 16px;
-  height: 16px;
-  margin-right: var(--space-2);
-  vertical-align: -2px;
-  border: 2px solid var(--legend-dark);
-  border-radius: 2px;
-  -webkit-print-color-adjust: exact;
-  print-color-adjust: exact;
-}
-.swatch--dark { background: var(--legend-dark); }
-.swatch--medium { background: linear-gradient(90deg, var(--legend-dark) 50%, var(--legend-medium) 50%); }
-.swatch--light { background: var(--white); }
-
-.involvement-lines p { margin-bottom: var(--space-3); font-size: 16px; line-height: 1.5; color: var(--slate); }
-
-.legend { display: flex; flex-direction: column; gap: var(--space-3); margin: 0 0 var(--space-4); padding: 0; list-style: none; }
-.legend li { display: flex; align-items: center; font-weight: 500; }
-@media (min-width: 900px) { .legend { flex-direction: row; gap: var(--space-7); } }
+/* The key is a list of three sample chips, each holding its own label. It stacks on phones. */
+.chips.legend { flex-direction: column; flex-wrap: nowrap; align-items: flex-start; margin-bottom: var(--space-4); }
+@media (min-width: 900px) { .chips.legend { flex-direction: row; flex-wrap: wrap; gap: var(--space-3); } }
 
 .module h3 { margin-bottom: var(--space-3); padding-bottom: var(--space-3); border-bottom: 1px solid var(--rule); font-size: 22px; }
 .involvement-group + .involvement-group { margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--rule); }
-.involvement-label { display: flex; align-items: center; margin: 0 0 var(--space-2); font-size: 14px; font-weight: 600; color: var(--slate); }
+.involvement-lines { margin-bottom: var(--space-5); }
+.involvement-lines .involvement-group + .involvement-group { padding-top: 0; border-top: 0; }
+.involvement-label { margin: 0 0 var(--space-2); font-size: 14px; font-weight: 600; color: var(--slate); }
 .chips { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
-/* Platform chips: same three looks as the legend, each with the matching small shape marker. */
+/* Platform chips. The three kinds of involvement differ in fill and in border style, not only
+   in color: solid navy; pale blue with a solid mid-blue border; white with a dashed gray border.
+   The key uses the same chips, and every group is also labeled in text above its chips. */
 .chips li {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 3px 11px;
+  padding: 2px 10px;
   font-size: 14px;
   line-height: 1.5;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-radius: 3px;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
-/* The small markers are drawn with borders only (no background), so they also print on paper
-   when the browser leaves out background colors: solid = a 9 px square of thick border;
-   half-filled = a thin outline with a thick left side; empty = a thin outline. */
-.chips li::before {
-  content: "";
-  flex: 0 0 auto;
-  box-sizing: border-box;
-  width: 9px;
-  height: 9px;
-  border: 1.5px solid var(--legend-dark);
-}
-.chips--dark li { color: var(--white); background: var(--legend-dark); border-color: var(--legend-dark); }
-.chips--dark li::before { background: var(--white); border-color: var(--white); }
-.chips--medium li { color: var(--ink); background: var(--legend-medium); border-color: var(--legend-medium); }
-.chips--medium li::before { border-left-width: 4.5px; }
-.chips--light li { color: var(--ink); background: var(--white); border-color: var(--legend-light-outline); }
+.chips--dark li, .chips .chip--dark { color: var(--white); background: var(--legend-dark); border-color: var(--legend-dark); }
+.chips--medium li, .chips .chip--medium { color: var(--ink); background: var(--legend-medium); border-color: var(--legend-medium-border); }
+.chips--light li, .chips .chip--light { color: var(--ink); background: var(--white); border-color: var(--legend-light-outline); border-style: dashed; }
 
 /* ---------- Accelerators page ---------- */
 .box--cta { align-self: end; }
@@ -955,20 +925,13 @@ summary:focus-visible,
   /* Plain black on white: no background bands, no shadows. */
   *, *::before, *::after { background: transparent !important; box-shadow: none !important; text-shadow: none !important; color: #000 !important; }
 
-  /* Involvement markers and platform chips keep their look in print: navy with white text,
-     pale blue with dark text, white with an outline, and the three marker shapes. The shapes
-     and the outline mean the three kinds stay apart even on a black and white printer. */
-  .swatch, .chips li { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .swatch { border: 2px solid var(--legend-dark) !important; }
-  .swatch--dark { background: var(--legend-dark) !important; }
-  .swatch--medium { background: linear-gradient(90deg, var(--legend-dark) 50%, var(--legend-medium) 50%) !important; }
-  .swatch--light { background: var(--white) !important; }
-  .chips--dark li { color: var(--white) !important; background: var(--legend-dark) !important; border-color: var(--legend-dark) !important; }
-  .chips--medium li { color: var(--ink) !important; background: var(--legend-medium) !important; border-color: var(--legend-medium) !important; }
-  .chips--light li { color: var(--ink) !important; background: var(--white) !important; border-color: var(--legend-light-outline) !important; }
-  /* the chip markers are borders, which always print; keep their colors explicit */
-  .chips li::before { border-color: var(--legend-dark) !important; }
-  .chips--dark li::before { border-color: var(--white) !important; background: var(--white) !important; }
+  /* Platform chips keep their look in print: navy with white text, pale blue with a solid
+     border, white with a dashed border. The fills and the two border styles mean the three
+     kinds stay apart even on a black and white printer. */
+  .chips li { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .chips--dark li, .chips .chip--dark { color: var(--white) !important; background: var(--legend-dark) !important; border-color: var(--legend-dark) !important; }
+  .chips--medium li, .chips .chip--medium { color: var(--ink) !important; background: var(--legend-medium) !important; border-color: var(--legend-medium-border) !important; }
+  .chips--light li, .chips .chip--light { color: var(--ink) !important; background: var(--white) !important; border-color: var(--legend-light-outline) !important; }
 
   /* Removed in print: navigation, menu button, print button, footer navigation, buttons. */
   .skip-link, .site-header, .breadcrumb, .footer-nav, .print-button, .btn, .btn-row,
@@ -1005,6 +968,14 @@ summary:focus-visible,
      instead of leaving half a page blank. */
   #guidewire .card-grid, #categories .card-grid { break-inside: auto; }
   #guidewire .card, #categories .card { padding-top: 10pt; padding-bottom: 10pt; }
+  /* A group heading stays with its chips, and a group of chips is never split. The key box
+     is a little tighter and its sample chips sit in a row, so the first Guidewire group
+     fits under the introduction on page 1. */
+  .involvement-label { break-after: avoid; }
+  .involvement-group { break-inside: avoid; }
+  #involvement .box { padding-top: 10pt; padding-bottom: 10pt; }
+  .chips.legend { flex-direction: row; flex-wrap: wrap; margin-bottom: 8pt; }
+  .involvement-lines { margin-bottom: 10pt; }
   img { max-width: 100%; }
 
   /* Links stay readable: underlined, with the address after external link text. */
