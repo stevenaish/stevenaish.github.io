@@ -191,6 +191,7 @@ h3 { font-size: 25px; line-height: 1.25; }
 /* ---------- Focus (D3): 3 px outline offset 3 px; white on navy bands ---------- */
 a:focus-visible,
 button:focus-visible,
+summary:focus-visible,
 [tabindex]:focus-visible {
   outline: 3px solid var(--navy);
   outline-offset: 3px;
