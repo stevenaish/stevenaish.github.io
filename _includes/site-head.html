@@ -31,6 +31,8 @@
 <meta name="twitter:description" content="{{ page.description | escape }}">
 {%- endif %}
 <meta name="twitter:image" content="{{ share_image }}">
+{%- comment %} Repeating print footer (D5): this page's address, via page-margin boxes where the browser supports them. {% endcomment %}
+<style media="print">@page { @bottom-left { content: "Source: {{ canonical }}"; } @bottom-right { content: "Page " counter(page) " of " counter(pages); } }</style>
 {% include site-jsonld.html %}
 {%- endunless %}
 <script>document.documentElement.classList.add('js');</script>

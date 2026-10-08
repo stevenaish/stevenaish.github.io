@@ -842,10 +842,58 @@ button:focus-visible,
 .footer-nav a:hover { color: var(--link-hover); text-decoration: underline; }
 .footer-line, .footer-copyright, .footer-updated { margin: 0; }
 
-/* Print: the footer text lines (provenance, copyright, date) always print.
-   Build list item 15 adds the rest of the print rules. */
+/* ---------- Print and save-to-PDF (Build Handoff D5) ---------- */
+/* Print-only elements stay hidden on screen. */
+.print-provenance, .print-source-line { display: none; }
+
+@page { margin: 0.7in 0.7in 0.9in; }
+@page {
+  @bottom-left { font: 9pt "IBM Plex Sans", Arial, sans-serif; color: #000; }
+  @bottom-right { font: 9pt "IBM Plex Sans", Arial, sans-serif; color: #000; }
+}
+
 @media print {
-  .footer-line, .footer-copyright, .footer-updated { display: block; color: #000; }
+  html { font-size: 11pt; }
+  body { background: #fff; color: #000; }
+  /* Plain black on white: no background bands, no shadows. */
+  *, *::before, *::after { background: transparent !important; box-shadow: none !important; text-shadow: none !important; color: #000 !important; }
+
+  /* Removed in print: navigation, menu button, print button, footer navigation, buttons. */
+  .skip-link, .site-header, .breadcrumb, .footer-nav, .print-button, .btn, .btn-row,
+  .connect__actions, .toc, .career__aside, .provenance { display: none !important; }
+
+  /* Provenance at the top of page 1, in normal flow, and a static source line at the end. */
+  .print-provenance { display: block; margin: 0 0 14pt; padding-bottom: 8pt; border-bottom: 1px solid #000; }
+  .print-provenance p { margin: 0 0 2pt; font-size: 10pt; line-height: 1.4; }
+  .print-provenance .print-provenance__name { font-size: 14pt; font-weight: 600; }
+  .print-provenance .print-provenance__title { font-weight: 600; }
+  .print-source-line { display: block; margin: 0; }
+  .footer-line, .footer-copyright, .footer-updated { display: block; margin: 0; }
+  .site-footer { border-top: 1px solid #000; margin-top: 16pt; padding: 8pt 0 0; }
+
+  /* Use the full printed page width. */
+  .container { max-width: none; width: auto; margin: 0; padding-left: 0; padding-right: 0; }
+  .band { padding-top: 10pt; padding-bottom: 10pt; }
+  .career { display: block; padding-bottom: 0; }
+  .role { display: block; padding: 10pt 0; }
+  .card, .box { border-color: #000; }
+  /* Grid layouts print as simple stacked blocks, which paginate cleanly. */
+  .split, .hero, .coverage-layout, .coverage-list, .cov-item, .card-grid, .about-row, .connect, .contact-stack { display: block; }
+  .card-grid > li, .coverage-list > li, .contact-stack > * { margin-bottom: 10pt; }
+  .cov-item__meta { margin-bottom: 4pt; }
+  .hero__portrait { margin: 10pt 0 0; max-width: 2.6in; }
+
+  /* Keep headings with what follows, and small items whole. */
+  h1, h2, h3, .label { break-after: avoid; }
+  li, figure, img, .card, blockquote { break-inside: avoid; }
+  .cov-item { break-inside: auto; }
+  .cov-item__headline { break-after: avoid; }
+  img { max-width: 100%; }
+
+  /* Links stay readable: underlined, with the address after external link text. */
+  a { text-decoration: underline; }
+  main a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.85em; overflow-wrap: anywhere; word-break: break-all; }
+  main a[href*="marketplace.guidewire.com"]::after { content: " (marketplace.guidewire.com)"; }
 }
 
 @media (min-width: 768px) {
