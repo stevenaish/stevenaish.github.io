@@ -300,9 +300,11 @@ button:focus-visible,
   border-radius: 8px;
   overflow: hidden;
 }
-.hero__portrait img { display: block; width: 100%; height: auto; }
+.hero__portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
 
 @media (min-width: 900px) {
+  /* The wide-screen portrait files are 4:5; reserve that shape so nothing moves when the picture loads. */
+  .hero__portrait img { aspect-ratio: 4 / 5; }
   .hero {
     grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
     gap: var(--space-9);
@@ -599,9 +601,11 @@ button:focus-visible,
   border: 1px solid var(--rule);
   border-radius: 999px;
 }
-.toc__details ul { margin: var(--space-3) 0 0; padding: 0; list-style: none; }
-.toc__details li { border-bottom: 1px solid var(--rule); }
-.toc__details li a {
+/* Two copies of the list are in the page; the stylesheet alone picks one by width, so nothing moves after load. */
+.toc__details ul, .toc__list { margin: var(--space-3) 0 0; padding: 0; list-style: none; }
+.toc__details li, .toc__list li { border-bottom: 1px solid var(--rule); }
+.toc__list, .toc__title { display: none; }
+.toc__details li a, .toc__list li a {
   display: flex;
   align-items: center;
   min-height: 44px;
@@ -609,7 +613,7 @@ button:focus-visible,
   color: var(--ink);
   text-decoration: none;
 }
-.toc__details li a:hover { color: var(--link-hover); text-decoration: underline; }
+.toc__details li a:hover, .toc__list li a:hover { color: var(--link-hover); text-decoration: underline; }
 
 .role {
   display: grid;
@@ -646,21 +650,17 @@ button:focus-visible,
   }
   .career__head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-5); }
   .career__aside { position: sticky; top: var(--space-5); align-self: start; padding-top: var(--space-8); }
-  .toc__details summary {
-    min-height: 0;
-    padding: 0;
+  .toc__details { display: none; }
+  .toc__title {
+    display: block;
+    margin: 0;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.07em;
     text-transform: uppercase;
     color: var(--slate);
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    cursor: default;
-    list-style: none;
   }
-  .toc__details summary::-webkit-details-marker { display: none; }
+  .toc__list { display: block; }
   .role {
     grid-template-columns: 200px minmax(0, 1fr);
     grid-template-areas: "dates label" "dates name" "dates title" "dates body";

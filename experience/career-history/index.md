@@ -20,9 +20,7 @@ scripts:
   </div>
   <aside class="career__aside">
     <nav class="toc" aria-label="On this page">
-      <details class="toc__details" open>
-        <summary>On this page</summary>
-        <ul>
+      {%- capture toc_items %}
           <li><a href="#cognizant">Cognizant</a></li>
           <li><a href="#wgroup">WGroup and WorkBest, LLC</a></li>
           <li><a href="#fifththird">Fifth Third Bank</a></li>
@@ -34,8 +32,13 @@ scripts:
           <li><a href="#psmi">PSMI</a></li>
           <li><a href="#esi">Employee Solutions-East, Inc.</a></li>
           <li><a href="#education">Education</a></li>
-        </ul>
+      {%- endcapture %}
+      <details class="toc__details">
+        <summary>On this page</summary>
+        <ul>{{ toc_items }}</ul>
       </details>
+      <p class="toc__title" aria-hidden="true">On this page</p>
+      <ul class="toc__list">{{ toc_items }}</ul>
     </nav>
   </aside>
   <div class="career__main">

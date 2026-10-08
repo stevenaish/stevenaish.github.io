@@ -17,7 +17,7 @@ breadcrumb:
         <source media="(min-width: 900px)" type="image/webp" srcset="/assets/img/steve-naish-portrait-hero-480w.webp 480w, /assets/img/steve-naish-portrait-hero-960w.webp 960w" sizes="(min-width: 1200px) 480px, 40vw" width="480" height="600">
         <source media="(min-width: 900px)" type="image/jpeg" srcset="/assets/img/steve-naish-portrait-hero-480w.jpg 480w, /assets/img/steve-naish-portrait-hero-960w.jpg 960w" sizes="(min-width: 1200px) 480px, 40vw" width="480" height="600">
         <source type="image/webp" srcset="/assets/img/steve-naish-portrait-mobile-800w.webp 800w" sizes="100vw" width="800" height="600">
-        <img src="/assets/img/steve-naish-portrait-mobile-800w.jpg" srcset="/assets/img/steve-naish-portrait-mobile-800w.jpg 800w" sizes="100vw" width="800" height="600" alt="Steve Naish" loading="lazy" decoding="async">
+        <img src="/assets/img/steve-naish-portrait-mobile-800w.jpg" srcset="/assets/img/steve-naish-portrait-mobile-800w.jpg 800w" sizes="100vw" width="800" height="600" alt="Steve Naish" fetchpriority="high" decoding="async">
       </picture>
     </figure>
   </div>
